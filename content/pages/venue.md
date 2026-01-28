@@ -1,6 +1,6 @@
 ---
 title: Our Venue
-description: La Maison offers a sophisticated and versatile venue perfect for weddings, corporate events, milestone celebrations, and intimate gatherings. Our elegant space combines timeless charm with modern amenities.
+description: MANAGISH offers a sophisticated and versatile venue perfect for weddings, corporate events, milestone celebrations, and intimate gatherings. Our elegant space combines timeless charm with modern amenities.
 capacity: Up to 200 guests seated, 300 for cocktail receptions
 amenities:
   - Professional sound system

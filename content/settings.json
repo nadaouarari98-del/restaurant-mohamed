@@ -1,8 +1,9 @@
 {
-  "restaurant_name": "La Maison",
-  "tagline": "Where culinary artistry meets timeless elegance",
+  "restaurant_name": "MANAGISH",
+  "restaurant_name_arabic": "مناقيش",
+  "tagline": "Authentic Lebanese cuisine crafted with passion",
   "phone": "+1 (234) 567-890",
-  "email": "hello@lamaison.com",
+  "email": "hello@managish.com",
   "address": {
     "street": "123 Gourmet Avenue",
     "city": "New York",
@@ -14,8 +15,8 @@
     "weekend": "10:00 AM - 11:00 PM"
   },
   "social_links": {
-    "facebook": "https://facebook.com/lamaison",
-    "instagram": "https://instagram.com/lamaison",
-    "twitter": "https://twitter.com/lamaison"
+    "facebook": "https://facebook.com/managish",
+    "instagram": "https://instagram.com/managish",
+    "twitter": "https://twitter.com/managish"
   }
 }

@@ -1,23 +1,23 @@
 ---
 type: page
-title: About La Maison
+title: About MANAGISH
 featured_image: /images/uploads/about-hero.jpg
 ---
 
 ## Our Story
 
-La Maison was born from a simple vision: to create a dining destination where exceptional cuisine meets genuine hospitality. Founded by Chef Jean-Pierre Dubois in 2010, our restaurant has become a beloved institution in the heart of the city.
+MANAGISH was born from a simple vision: to bring the authentic flavors of Lebanon to your table. Our restaurant has become a beloved destination for those seeking genuine Lebanese cuisine prepared with love and tradition.
 
-What started as a small bistro has evolved into a culinary landmark, yet we've never lost sight of our founding principles. Every dish that leaves our kitchen carries the same passion and attention to detail that defined our first service.
+What started as a small family kitchen has evolved into a culinary landmark, yet we've never lost sight of our founding principles. Every dish that leaves our kitchen carries the same passion and attention to detail that defined our first service.
 
 ## Our Philosophy
 
-We believe that extraordinary dishes begin with extraordinary ingredients. That's why we've cultivated relationships with local farmers, fishermen, and artisan producers who share our commitment to quality.
+We believe that extraordinary dishes begin with extraordinary ingredients. That's why we source the finest za'atar, olive oil, and fresh produce to create authentic Lebanese flavors.
 
-Our menu changes with the seasons, celebrating the natural rhythm of the earth and ensuring that every ingredient is at its peak.
+Our menu celebrates the rich culinary traditions of Lebanon, from freshly baked manakish to traditional mezze and grilled specialties.
 
 ## Our Values
 
-- **Excellence**: We pursue perfection in every detail
+- **Authenticity**: We honor traditional Lebanese recipes
 - **Hospitality**: Every guest is family
-- **Sustainability**: We're committed to protecting our planet
+- **Quality**: Only the finest ingredients make it to your plate
