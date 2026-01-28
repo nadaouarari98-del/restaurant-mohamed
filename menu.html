@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our exquisite menu featuring seasonal dishes crafted with the finest ingredients at La Maison.">
+  <title>Menu | La Maison</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo">La <span>Maison</span></a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li><a href="about.html" class="nav__link">About</a></li>
+            <li><a href="menu.html" class="nav__link nav__link--active">Menu</a></li>
+            <li><a href="venue.html" class="nav__link">Venue</a></li>
+            <li><a href="catering.html" class="nav__link">Catering</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html" class="nav-mobile__link">Home</a>
+    <a href="about.html" class="nav-mobile__link">About</a>
+    <a href="menu.html" class="nav-mobile__link">Menu</a>
+    <a href="venue.html" class="nav-mobile__link">Venue</a>
+    <a href="catering.html" class="nav-mobile__link">Catering</a>
+    <a href="contact.html" class="nav-mobile__link">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero hero--page">
+    <div class="hero__background" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80');"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__subtitle">Culinary Excellence</p>
+      <h1 class="hero__title">Our Menu</h1>
+    </div>
+  </section>
+
+  <!-- Menu Content -->
+  <section class="section">
+    <div class="container">
+      <!-- Starters -->
+      <div class="menu-section fade-in" id="starters">
+        <h2 class="menu-section__title">Starters</h2>
+        <div class="menu-items">
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200&q=80" alt="Garden Symphony Salad">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Garden Symphony</h3>
+                <span class="menu-item__price">$18</span>
+              </div>
+              <p class="menu-item__description">Fresh seasonal vegetables, mixed greens, cherry tomatoes, cucumber ribbons with house-made citrus vinaigrette</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--vegetarian">Vegetarian</span>
+                <span class="menu-item__tag menu-item__tag--gluten-free">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1608039829572-2a9e0e1b0f6e?w=200&q=80" alt="Soup of the Day">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Soup du Jour</h3>
+                <span class="menu-item__price">$14</span>
+              </div>
+              <p class="menu-item__description">Chef's daily creation using the freshest seasonal ingredients, served with artisan bread</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--vegetarian">Vegetarian</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=200&q=80" alt="Tuna Tartare">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Tuna Tartare</h3>
+                <span class="menu-item__price">$24</span>
+              </div>
+              <p class="menu-item__description">Sashimi-grade tuna, avocado mousse, sesame ginger dressing, crispy wonton chips</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--gluten-free">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=200&q=80" alt="Burrata">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Burrata Caprese</h3>
+                <span class="menu-item__price">$22</span>
+              </div>
+              <p class="menu-item__description">Creamy burrata, heirloom tomatoes, fresh basil, aged balsamic reduction, extra virgin olive oil</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--vegetarian">Vegetarian</span>
+                <span class="menu-item__tag menu-item__tag--gluten-free">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Main Courses -->
+      <div class="menu-section fade-in" id="mains">
+        <h2 class="menu-section__title">Main Courses</h2>
+        <div class="menu-items">
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=200&q=80" alt="Prime Ribeye">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Prime Ribeye</h3>
+                <span class="menu-item__price">$58</span>
+              </div>
+              <p class="menu-item__description">28-day aged ribeye steak, truffle butter, roasted garlic mashed potatoes, seasonal vegetables</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--gluten-free">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=200&q=80" alt="Ocean's Finest">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Ocean's Finest</h3>
+                <span class="menu-item__price">$65</span>
+              </div>
+              <p class="menu-item__description">Maine lobster tail, pan-seared scallops, tiger prawns, saffron risotto, champagne beurre blanc</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--gluten-free">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=200&q=80" alt="Duck Confit">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Duck Confit</h3>
+                <span class="menu-item__price">$45</span>
+              </div>
+              <p class="menu-item__description">Slow-cooked duck leg, cherry gastrique, wild mushroom risotto, braised red cabbage</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--gluten-free">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1560684352-8497838a2229?w=200&q=80" alt="Rack of Lamb">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Herb-Crusted Lamb</h3>
+                <span class="menu-item__price">$52</span>
+              </div>
+              <p class="menu-item__description">New Zealand rack of lamb, rosemary herb crust, mint pesto, roasted fingerling potatoes</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--gluten-free">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=200&q=80" alt="Salmon Fillet">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Pan-Seared Salmon</h3>
+                <span class="menu-item__price">$42</span>
+              </div>
+              <p class="menu-item__description">Atlantic salmon, lemon dill sauce, quinoa pilaf, grilled asparagus, microgreens</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--gluten-free">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=200&q=80" alt="Mushroom Risotto">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Wild Mushroom Risotto</h3>
+                <span class="menu-item__price">$34</span>
+              </div>
+              <p class="menu-item__description">Arborio rice, assorted wild mushrooms, truffle oil, aged parmesan, fresh thyme</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--vegetarian">Vegetarian</span>
+                <span class="menu-item__tag menu-item__tag--gluten-free">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Desserts -->
+      <div class="menu-section fade-in" id="desserts">
+        <h2 class="menu-section__title">Desserts</h2>
+        <div class="menu-items">
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=200&q=80" alt="Chocolate Fondant">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Chocolate Indulgence</h3>
+                <span class="menu-item__price">$16</span>
+              </div>
+              <p class="menu-item__description">Warm dark chocolate fondant, molten center, Madagascar vanilla bean ice cream, cocoa dust</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--vegetarian">Vegetarian</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=200&q=80" alt="Crème Brûlée">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Classic Crème Brûlée</h3>
+                <span class="menu-item__price">$14</span>
+              </div>
+              <p class="menu-item__description">Silky vanilla custard, caramelized sugar crust, fresh berries</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--vegetarian">Vegetarian</span>
+                <span class="menu-item__tag menu-item__tag--gluten-free">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=200&q=80" alt="Cheesecake">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">New York Cheesecake</h3>
+                <span class="menu-item__price">$15</span>
+              </div>
+              <p class="menu-item__description">Creamy cheesecake, graham cracker crust, seasonal fruit compote, whipped cream</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--vegetarian">Vegetarian</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=200&q=80" alt="Tiramisu">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Tiramisu</h3>
+                <span class="menu-item__price">$14</span>
+              </div>
+              <p class="menu-item__description">Espresso-soaked ladyfingers, mascarpone cream, Dutch cocoa, amaretto</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--vegetarian">Vegetarian</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Drinks -->
+      <div class="menu-section fade-in" id="drinks">
+        <h2 class="menu-section__title">Beverages</h2>
+        <div class="menu-items">
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=200&q=80" alt="Wine Selection">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">House Wine Selection</h3>
+                <span class="menu-item__price">$12-$18</span>
+              </div>
+              <p class="menu-item__description">Curated red, white, and rosé wines by the glass. Ask your server for our extensive wine list.</p>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=200&q=80" alt="Craft Cocktails">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Signature Cocktails</h3>
+                <span class="menu-item__price">$16-$20</span>
+              </div>
+              <p class="menu-item__description">Handcrafted cocktails featuring premium spirits and fresh ingredients</p>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&q=80" alt="Coffee">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Espresso & Coffee</h3>
+                <span class="menu-item__price">$5-$8</span>
+              </div>
+              <p class="menu-item__description">Freshly brewed coffee, espresso, cappuccino, latte, and specialty coffee drinks</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--vegetarian">Vegetarian</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__image">
+              <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=200&q=80" alt="Fresh Juices">
+            </div>
+            <div class="menu-item__content">
+              <div class="menu-item__header">
+                <h3 class="menu-item__title">Fresh Pressed Juices</h3>
+                <span class="menu-item__price">$8</span>
+              </div>
+              <p class="menu-item__description">Orange, grapefruit, apple, or seasonal fruit blend - freshly pressed to order</p>
+              <div class="menu-item__tags">
+                <span class="menu-item__tag menu-item__tag--vegetarian">Vegetarian</span>
+                <span class="menu-item__tag menu-item__tag--gluten-free">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- About Column -->
+        <div class="footer__column">
+          <h4>La Maison</h4>
+          <p>
+            A haven of culinary excellence where traditional techniques meet modern innovation.
+            Experience dining elevated to an art form.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="18" cy="6" r="1"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer__column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="venue.html">Venue Rental</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours Column -->
+        <div class="footer__column">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li>Monday - Friday</li>
+            <li>11:30 AM - 10:00 PM</li>
+            <li>&nbsp;</li>
+            <li>Saturday - Sunday</li>
+            <li>10:00 AM - 11:00 PM</li>
+          </ul>
+        </div>
+
+        <!-- Contact & Map Column -->
+        <div class="footer__column">
+          <h4>Find Us</h4>
+          <p>
+            123 Gourmet Avenue<br>
+            Culinary District<br>
+            New York, NY 10001<br>
+            <a href="tel:+1234567890">+1 (234) 567-890</a><br>
+            <a href="mailto:hello@lamaison.com">hello@lamaison.com</a>
+          </p>
+          <div class="footer__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095919364!2d-74.00425878428698!3d40.74076904379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sus!4v1234567890"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 La Maison. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

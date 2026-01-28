@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact La Maison for reservations, inquiries, or to learn more about our dining experience.">
+  <title>Contact Us | La Maison</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo">La <span>Maison</span></a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li><a href="about.html" class="nav__link">About</a></li>
+            <li><a href="menu.html" class="nav__link">Menu</a></li>
+            <li><a href="venue.html" class="nav__link">Venue</a></li>
+            <li><a href="catering.html" class="nav__link">Catering</a></li>
+            <li><a href="contact.html" class="nav__link nav__link--active">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html" class="nav-mobile__link">Home</a>
+    <a href="about.html" class="nav-mobile__link">About</a>
+    <a href="menu.html" class="nav-mobile__link">Menu</a>
+    <a href="venue.html" class="nav-mobile__link">Venue</a>
+    <a href="catering.html" class="nav-mobile__link">Catering</a>
+    <a href="contact.html" class="nav-mobile__link">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero hero--page">
+    <div class="hero__background" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=80');"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__subtitle">Get In Touch</p>
+      <h1 class="hero__title">Contact Us</h1>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Information -->
+        <div class="contact-info fade-in-left">
+          <div class="contact-item">
+            <div class="contact-item__icon">📍</div>
+            <div class="contact-item__content">
+              <h4>Address</h4>
+              <p>123 Gourmet Avenue<br>Culinary District<br>New York, NY 10001</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">📞</div>
+            <div class="contact-item__content">
+              <h4>Phone</h4>
+              <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">✉️</div>
+            <div class="contact-item__content">
+              <h4>Email</h4>
+              <p><a href="mailto:hello@lamaison.com">hello@lamaison.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">🕐</div>
+            <div class="contact-item__content">
+              <h4>Opening Hours</h4>
+              <p>
+                <strong>Monday - Friday</strong><br>
+                11:30 AM - 10:00 PM<br><br>
+                <strong>Saturday - Sunday</strong><br>
+                10:00 AM - 11:00 PM
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">📱</div>
+            <div class="contact-item__content">
+              <h4>Follow Us</h4>
+              <div class="footer__social" style="margin-top: 0.5rem;">
+                <a href="#" aria-label="Facebook">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="18" cy="6" r="1"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Twitter">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="fade-in-right">
+          <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="reservation">
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display: none;">
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
+
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="name">Full Name *</label>
+                <input type="text" id="name" name="name" class="form__input" required>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="email">Email Address *</label>
+                <input type="email" id="email" name="email" class="form__input" required>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="subject">Subject *</label>
+              <select id="subject" name="subject" class="form__select" required>
+                <option value="">Select a subject</option>
+                <option value="reservation">Make a Reservation</option>
+                <option value="general">General Inquiry</option>
+                <option value="feedback">Feedback</option>
+                <option value="private-event">Private Event</option>
+                <option value="catering">Catering Inquiry</option>
+                <option value="venue">Venue Rental</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="message">Message *</label>
+              <textarea id="message" name="message" class="form__textarea" required placeholder="How can we help you? For reservations, please include your preferred date, time, and party size..."></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn--primary">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Visit Us</p>
+        <h2 class="section-header__title">Find La Maison</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <div class="contact-map fade-in" style="height: 450px;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095919364!2d-74.00425878428698!3d40.74076904379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sus!4v1234567890"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          style="width: 100%; height: 100%; border: none; border-radius: var(--radius-md);">
+        </iframe>
+      </div>
+
+      <div class="text-center fade-in" style="margin-top: var(--spacing-md);">
+        <p style="color: var(--color-text-light);">
+          Located in the heart of the Culinary District, we're easily accessible by subway and offer complimentary valet parking.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- About Column -->
+        <div class="footer__column">
+          <h4>La Maison</h4>
+          <p>
+            A haven of culinary excellence where traditional techniques meet modern innovation.
+            Experience dining elevated to an art form.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="18" cy="6" r="1"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer__column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="venue.html">Venue Rental</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours Column -->
+        <div class="footer__column">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li>Monday - Friday</li>
+            <li>11:30 AM - 10:00 PM</li>
+            <li>&nbsp;</li>
+            <li>Saturday - Sunday</li>
+            <li>10:00 AM - 11:00 PM</li>
+          </ul>
+        </div>
+
+        <!-- Contact & Map Column -->
+        <div class="footer__column">
+          <h4>Find Us</h4>
+          <p>
+            123 Gourmet Avenue<br>
+            Culinary District<br>
+            New York, NY 10001<br>
+            <a href="tel:+1234567890">+1 (234) 567-890</a><br>
+            <a href="mailto:hello@lamaison.com">hello@lamaison.com</a>
+          </p>
+          <div class="footer__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095919364!2d-74.00425878428698!3d40.74076904379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sus!4v1234567890"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 La Maison. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

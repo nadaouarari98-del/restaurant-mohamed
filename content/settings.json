@@ -1,0 +1,21 @@
+{
+  "restaurant_name": "La Maison",
+  "tagline": "Where culinary artistry meets timeless elegance",
+  "phone": "+1 (234) 567-890",
+  "email": "hello@lamaison.com",
+  "address": {
+    "street": "123 Gourmet Avenue",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10001"
+  },
+  "opening_hours": {
+    "weekday": "11:30 AM - 10:00 PM",
+    "weekend": "10:00 AM - 11:00 PM"
+  },
+  "social_links": {
+    "facebook": "https://facebook.com/lamaison",
+    "instagram": "https://instagram.com/lamaison",
+    "twitter": "https://twitter.com/lamaison"
+  }
+}

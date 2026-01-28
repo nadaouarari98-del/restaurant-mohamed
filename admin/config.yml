@@ -1,0 +1,239 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Media files configuration
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Site URL (update this after deployment)
+site_url: https://your-site.netlify.app
+
+# Logo for the CMS
+logo_url: /images/uploads/logo.png
+
+# Collections
+collections:
+  # Menu Items Collection
+  - name: "menu"
+    label: "Menu Items"
+    folder: "content/menu"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "The name of the dish"
+
+      - label: "Price"
+        name: "price"
+        widget: "string"
+        hint: "e.g., $24 or $18-$22"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+        hint: "A short description of the dish"
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Starter", value: "starter" }
+          - { label: "Main Course", value: "main" }
+          - { label: "Dessert", value: "dessert" }
+          - { label: "Drink", value: "drink" }
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Photo of the dish"
+
+      - label: "Vegetarian"
+        name: "vegetarian"
+        widget: "boolean"
+        default: false
+        hint: "Is this dish vegetarian?"
+
+      - label: "Gluten Free"
+        name: "gluten_free"
+        widget: "boolean"
+        default: false
+        hint: "Is this dish gluten-free?"
+
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        hint: "Show on homepage highlights?"
+
+      - label: "Order"
+        name: "order"
+        widget: "number"
+        default: 0
+        hint: "Display order within category (lower = first)"
+
+  # Venue Information (Single File)
+  - name: "venue"
+    label: "Venue Information"
+    files:
+      - name: "venue_info"
+        label: "Venue Details"
+        file: "content/pages/venue.md"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+            default: "Our Venue"
+
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            hint: "Main venue description"
+
+          - label: "Capacity"
+            name: "capacity"
+            widget: "string"
+            hint: "e.g., Up to 200 guests"
+
+          - label: "Amenities"
+            name: "amenities"
+            widget: "list"
+            field:
+              label: "Amenity"
+              name: "amenity"
+              widget: "string"
+            hint: "List of venue amenities"
+
+          - label: "Rental Price"
+            name: "rental_price"
+            widget: "string"
+            hint: "Starting price or price range"
+
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            field:
+              label: "Image"
+              name: "image"
+              widget: "image"
+            hint: "Venue photos"
+
+  # Page Content Collection
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    filter:
+      field: "type"
+      value: "page"
+    fields:
+      - label: "Type"
+        name: "type"
+        widget: "hidden"
+        default: "page"
+
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Featured Image"
+        name: "featured_image"
+        widget: "image"
+        required: false
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
+  # Site Settings (Single File)
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "content/settings.json"
+        fields:
+          - label: "Restaurant Name"
+            name: "restaurant_name"
+            widget: "string"
+            default: "La Maison"
+
+          - label: "Tagline"
+            name: "tagline"
+            widget: "string"
+            default: "Where culinary artistry meets timeless elegance"
+
+          - label: "Phone"
+            name: "phone"
+            widget: "string"
+            hint: "Main contact phone number"
+
+          - label: "Email"
+            name: "email"
+            widget: "string"
+            hint: "Main contact email"
+
+          - label: "Address"
+            name: "address"
+            widget: "object"
+            fields:
+              - label: "Street"
+                name: "street"
+                widget: "string"
+              - label: "City"
+                name: "city"
+                widget: "string"
+              - label: "State"
+                name: "state"
+                widget: "string"
+              - label: "Zip Code"
+                name: "zip"
+                widget: "string"
+
+          - label: "Opening Hours"
+            name: "opening_hours"
+            widget: "object"
+            fields:
+              - label: "Weekday Hours"
+                name: "weekday"
+                widget: "string"
+                hint: "e.g., 11:30 AM - 10:00 PM"
+              - label: "Weekend Hours"
+                name: "weekend"
+                widget: "string"
+                hint: "e.g., 10:00 AM - 11:00 PM"
+
+          - label: "Social Links"
+            name: "social_links"
+            widget: "object"
+            fields:
+              - label: "Facebook URL"
+                name: "facebook"
+                widget: "string"
+                required: false
+              - label: "Instagram URL"
+                name: "instagram"
+                widget: "string"
+                required: false
+              - label: "Twitter URL"
+                name: "twitter"
+                widget: "string"
+                required: false
+
+          - label: "Logo"
+            name: "logo"
+            widget: "image"
+            required: false
+
+          - label: "Favicon"
+            name: "favicon"
+            widget: "image"
+            required: false

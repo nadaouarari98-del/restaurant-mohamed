@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience exquisite dining at La Maison - Fine cuisine, elegant venue rentals, and premium catering services.">
+  <title>La Maison | Fine Dining Restaurant</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo">La <span>Maison</span></a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+            <li><a href="about.html" class="nav__link">About</a></li>
+            <li><a href="menu.html" class="nav__link">Menu</a></li>
+            <li><a href="venue.html" class="nav__link">Venue</a></li>
+            <li><a href="catering.html" class="nav__link">Catering</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html" class="nav-mobile__link">Home</a>
+    <a href="about.html" class="nav-mobile__link">About</a>
+    <a href="menu.html" class="nav-mobile__link">Menu</a>
+    <a href="venue.html" class="nav-mobile__link">Venue</a>
+    <a href="catering.html" class="nav-mobile__link">Catering</a>
+    <a href="contact.html" class="nav-mobile__link">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero__background"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__subtitle">Welcome to</p>
+      <h1 class="hero__title">La Maison</h1>
+      <p class="hero__tagline">Where culinary artistry meets timeless elegance</p>
+      <div class="hero__buttons">
+        <a href="contact.html#reservation" class="btn btn--primary">Book a Table</a>
+        <a href="venue.html" class="btn btn--secondary">Explore Our Venue</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Venue Showcase Section -->
+  <section class="section" id="venue-preview">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Our Space</p>
+        <h2 class="section-header__title">An Unforgettable Venue</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <div class="venue">
+        <div class="venue__gallery fade-in-left">
+          <div class="venue__image venue__image--large">
+            <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=800&q=80" alt="Elegant dining hall">
+          </div>
+          <div class="venue__image">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80" alt="Private dining area">
+          </div>
+          <div class="venue__image">
+            <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=400&q=80" alt="Bar area">
+          </div>
+        </div>
+        <div class="venue__content fade-in-right">
+          <h3>Host Your Special Moments</h3>
+          <p class="venue__text">
+            Our stunning venue offers the perfect backdrop for weddings, corporate events,
+            and private celebrations. With elegant interiors, state-of-the-art amenities,
+            and impeccable service, we transform every occasion into an extraordinary experience.
+          </p>
+          <p class="venue__text">
+            Accommodating up to 200 guests, our versatile space can be customized to suit
+            your vision, from intimate gatherings to grand celebrations.
+          </p>
+          <a href="venue.html" class="btn btn--dark">Rent Our Venue</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Highlights Section -->
+  <section class="section section--cream" id="menu-highlights">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Culinary Excellence</p>
+        <h2 class="section-header__title">Featured Dishes</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <div class="menu-highlights">
+        <article class="menu-card fade-in">
+          <div class="menu-card__image">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80" alt="Seasonal Salad">
+          </div>
+          <div class="menu-card__content">
+            <h3 class="menu-card__title">Garden Symphony</h3>
+            <p class="menu-card__description">Fresh seasonal vegetables with citrus vinaigrette</p>
+            <span class="menu-card__price">$18</span>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card__image">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80" alt="Grilled Steak">
+          </div>
+          <div class="menu-card__content">
+            <h3 class="menu-card__title">Prime Ribeye</h3>
+            <p class="menu-card__description">28-day aged beef with truffle butter</p>
+            <span class="menu-card__price">$58</span>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card__image">
+            <img src="https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=400&q=80" alt="Seafood Platter">
+          </div>
+          <div class="menu-card__content">
+            <h3 class="menu-card__title">Ocean's Finest</h3>
+            <p class="menu-card__description">Lobster, scallops, and prawns with saffron risotto</p>
+            <span class="menu-card__price">$65</span>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card__image">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&q=80" alt="Chocolate Dessert">
+          </div>
+          <div class="menu-card__content">
+            <h3 class="menu-card__title">Chocolate Indulgence</h3>
+            <p class="menu-card__description">Dark chocolate fondant with vanilla ice cream</p>
+            <span class="menu-card__price">$16</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--spacing-lg);">
+        <a href="menu.html" class="btn btn--dark">View Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering & Events Section -->
+  <section class="section section--dark" id="catering-preview">
+    <div class="container">
+      <div class="catering">
+        <div class="catering__image fade-in-left">
+          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" alt="Catering spread">
+        </div>
+        <div class="catering__content fade-in-right">
+          <p class="section-header__subtitle">Premium Catering</p>
+          <h2 style="color: var(--color-white); margin-bottom: var(--spacing-sm);">Exceptional Catering Services</h2>
+          <p class="catering__text" style="color: rgba(255,255,255,0.8);">
+            Bring the La Maison experience to your event. Our catering team crafts
+            bespoke menus that reflect your taste and exceed expectations.
+          </p>
+          <ul class="catering__list" style="color: rgba(255,255,255,0.8);">
+            <li>Corporate Events & Meetings</li>
+            <li>Wedding Receptions</li>
+            <li>Private Parties</li>
+            <li>Gala Dinners</li>
+          </ul>
+          <a href="catering.html" class="btn btn--primary">Plan Your Event</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delivery & Takeaway Section -->
+  <section class="section" id="delivery">
+    <div class="container">
+      <div class="delivery">
+        <div class="section-header fade-in">
+          <p class="section-header__subtitle">At Your Doorstep</p>
+          <h2 class="section-header__title">Delivery & Takeaway</h2>
+          <div class="section-header__divider"></div>
+        </div>
+
+        <p class="fade-in" style="max-width: 600px; margin: 0 auto var(--spacing-md); color: var(--color-text-light);">
+          Enjoy our exquisite cuisine in the comfort of your home.
+          Order online for delivery or convenient pickup.
+        </p>
+
+        <div class="delivery__options">
+          <div class="delivery-option fade-in">
+            <div class="delivery-option__icon">🚗</div>
+            <h3 class="delivery-option__title">Pickup</h3>
+            <p class="delivery-option__text">Order ahead and collect your meal fresh from our kitchen</p>
+          </div>
+
+          <div class="delivery-option fade-in">
+            <div class="delivery-option__icon">🚚</div>
+            <h3 class="delivery-option__title">Delivery</h3>
+            <p class="delivery-option__text">Fast delivery within 5km radius</p>
+          </div>
+
+          <div class="delivery-option fade-in">
+            <div class="delivery-option__icon">📦</div>
+            <h3 class="delivery-option__title">Meal Kits</h3>
+            <p class="delivery-option__text">Chef-curated ingredients with step-by-step recipes</p>
+          </div>
+        </div>
+
+        <div class="text-center fade-in" style="margin-top: var(--spacing-lg);">
+          <a href="menu.html" class="btn btn--dark">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- About Column -->
+        <div class="footer__column">
+          <h4>La Maison</h4>
+          <p>
+            A haven of culinary excellence where traditional techniques meet modern innovation.
+            Experience dining elevated to an art form.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="18" cy="6" r="1"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer__column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="venue.html">Venue Rental</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours Column -->
+        <div class="footer__column">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li>Monday - Friday</li>
+            <li>11:30 AM - 10:00 PM</li>
+            <li>&nbsp;</li>
+            <li>Saturday - Sunday</li>
+            <li>10:00 AM - 11:00 PM</li>
+          </ul>
+        </div>
+
+        <!-- Contact & Map Column -->
+        <div class="footer__column">
+          <h4>Find Us</h4>
+          <p>
+            123 Gourmet Avenue<br>
+            Culinary District<br>
+            New York, NY 10001<br>
+            <a href="tel:+1234567890">+1 (234) 567-890</a><br>
+            <a href="mailto:hello@lamaison.com">hello@lamaison.com</a>
+          </p>
+          <div class="footer__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095919364!2d-74.00425878428698!3d40.74076904379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sus!4v1234567890"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 La Maison. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
