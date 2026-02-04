@@ -9,7 +9,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -62,10 +62,14 @@
     <div class="hero__content">
       <p class="hero__subtitle">Welcome to</p>
       <h1 class="hero__title">MANAGISH <span class="hero__title-arabic">مناقيش</span></h1>
-      <p class="hero__tagline">Authentic Lebanese cuisine crafted with passion</p>
+      <p class="hero__tagline">Turkish and Lebanese traditions, hand-crafted for today's table</p>
       <div class="hero__buttons">
         <a href="contact.html#reservation" class="btn btn--primary">Book a Table</a>
         <a href="venue.html" class="btn btn--secondary">Explore Our Venue</a>
+      </div>
+      <div class="hero__buttons" style="margin-top: 1rem;">
+        <a href="contact.html#reservation" class="btn btn--primary">Dine with us</a>
+        <a href="menu.html" class="btn btn--secondary">Come for coffee</a>
       </div>
     </div>
   </section>
@@ -92,17 +96,13 @@
           </div>
         </div>
         <div class="venue__content fade-in-right">
-          <h3>Host Your Special Moments</h3>
-          <p class="venue__text">
-            Our stunning venue offers the perfect backdrop for weddings, corporate events,
-            and private celebrations. With elegant interiors, state-of-the-art amenities,
-            and impeccable service, we transform every occasion into an extraordinary experience.
-          </p>
-          <p class="venue__text">
-            Accommodating up to 200 guests, our versatile space can be customized to suit
-            your vision, from intimate gatherings to grand celebrations.
-          </p>
-          <a href="venue.html" class="btn btn--dark">Rent Our Venue</a>
+          <h3 style="margin-bottom: var(--spacing-md);">Meet and Make Memories at MANAGISH</h3>
+          <p class="venue__text"><strong>Our dining room</strong><br>Settle into our wood-and-brick space with a cinematic view of Al Jada's East Boulevard. Cozy and well-composed, it's designed for easy conversation and gathering around the table.</p>
+          <p class="venue__text"><strong>Our coffee shop</strong><br>Step into a softly nostalgic, soulful space. With Arabic pastries, specialty coffee, and classic desserts, it's your hideaway for quieter talks and savoring something sweet.</p>
+          <div class="venue__buttons" style="margin-top: var(--spacing-md); display: flex; gap: var(--spacing-sm);">
+            <a href="contact.html#reservation" class="btn btn--dark" style="min-width: 160px; text-align: center;">Book a Table</a>
+            <a href="venue.html" class="btn btn--dark" style="min-width: 160px; text-align: center;">Rent Our Space</a>
+          </div>
         </div>
       </div>
     </div>
@@ -112,9 +112,10 @@
   <section class="section section--cream" id="menu-highlights">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-header__subtitle">Culinary Excellence</p>
-        <h2 class="section-header__title">Featured Dishes</h2>
+        <p class="section-header__subtitle">Our Menu</p>
+        <h2 class="section-header__title">Turkish & Lebanese Creations</h2>
         <div class="section-header__divider"></div>
+        <p style="max-width: 600px; margin: var(--spacing-md) auto 0; color: var(--color-text-light);">Generous portions for grazing and gathering. A rich selection of oven-fresh flat breads, all-day breakfast trays, feel-good street food, grills, and classic western comforts.</p>
       </div>
 
       <div class="menu-highlights">
@@ -177,18 +178,15 @@
           <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" alt="Catering spread">
         </div>
         <div class="catering__content fade-in-right">
-          <p class="section-header__subtitle">Premium Catering</p>
-          <h2 style="color: var(--color-white); margin-bottom: var(--spacing-sm);">Exceptional Catering Services</h2>
+          <p class="section-header__subtitle">Our Catering Service</p>
+          <h2 style="color: var(--color-white); margin-bottom: var(--spacing-sm);">Premium, reliable, satisfying.</h2>
           <p class="catering__text" style="color: rgba(255,255,255,0.8);">
             Bring the MANAGISH experience to your event. Our catering team crafts
             bespoke menus that reflect your taste and exceed expectations.
           </p>
-          <ul class="catering__list" style="color: rgba(255,255,255,0.8);">
-            <li>Corporate Events & Meetings</li>
-            <li>Wedding Receptions</li>
-            <li>Private Parties</li>
-            <li>Gala Dinners</li>
-          </ul>
+          <p class="catering__text" style="color: rgba(255,255,255,0.8);">
+            Entrust your event to our catering team. From menu planning to the full dining set-up and through to coffee and dessert service, we take care of the details so your guests enjoy the moment as you host with ease.
+          </p>
           <a href="catering.html" class="btn btn--primary">Plan Your Event</a>
         </div>
       </div>
@@ -206,8 +204,7 @@
         </div>
 
         <p class="fade-in" style="max-width: 600px; margin: 0 auto var(--spacing-md); color: var(--color-text-light);">
-          Enjoy our exquisite cuisine in the comfort of your home.
-          Order online for delivery or convenient pickup.
+          Enjoy our oven-fresh flat breads, all-day breakfast trays, feel-good street food, and classic western comforts, alongside desserts by Fayrooz. Call for pick up or order through delivery channels.
         </p>
 
         <div class="delivery__options">
