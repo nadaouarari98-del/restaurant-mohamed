@@ -100,44 +100,16 @@
             <div class="contact-item__content">
               <h4>Opening Hours</h4>
               <p>
-                <strong>Monday - Friday</strong><br>
-                11:30 AM - 10:00 PM<br><br>
-                <strong>Saturday - Sunday</strong><br>
-                10:00 AM - 11:00 PM
+                <strong>Mon - Fri:</strong> 11:30 AM - 10:00 PM<br>
+                <strong>Sat - Sun:</strong> 10:00 AM - 11:00 PM
               </p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-item__icon">📱</div>
-            <div class="contact-item__content">
-              <h4>Follow Us</h4>
-              <div class="footer__social" style="margin-top: 0.5rem;">
-                <a href="#" aria-label="Facebook">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
-                  </svg>
-                </a>
-                <a href="#" aria-label="Instagram">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <circle cx="18" cy="6" r="1"/>
-                  </svg>
-                </a>
-                <a href="#" aria-label="Twitter">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
-                  </svg>
-                </a>
-              </div>
             </div>
           </div>
         </div>
 
         <!-- Contact Form -->
-        <div class="fade-in-right">
-          <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="reservation">
+        <div class="fade-in-right" id="reservation">
+          <form class="form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact">
             <p style="display: none;">
               <label>Don't fill this out if you're human: <input name="bot-field"></label>
@@ -145,32 +117,29 @@
 
             <div class="form__row">
               <div class="form__group">
-                <label class="form__label" for="name">Full Name *</label>
-                <input type="text" id="name" name="name" class="form__input" required>
+                <label class="form__label" for="contact-name">Full Name *</label>
+                <input type="text" id="contact-name" name="name" class="form__input" required>
               </div>
               <div class="form__group">
-                <label class="form__label" for="email">Email Address *</label>
-                <input type="email" id="email" name="email" class="form__input" required>
+                <label class="form__label" for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" name="email" class="form__input" required>
               </div>
             </div>
 
             <div class="form__group">
-              <label class="form__label" for="subject">Subject *</label>
-              <select id="subject" name="subject" class="form__select" required>
+              <label class="form__label" for="contact-subject">Subject *</label>
+              <select id="contact-subject" name="subject" class="form__select" required>
                 <option value="">Select a subject</option>
                 <option value="reservation">Make a Reservation</option>
                 <option value="general">General Inquiry</option>
                 <option value="feedback">Feedback</option>
-                <option value="private-event">Private Event</option>
-                <option value="catering">Catering Inquiry</option>
-                <option value="venue">Venue Rental</option>
                 <option value="other">Other</option>
               </select>
             </div>
 
             <div class="form__group">
-              <label class="form__label" for="message">Message *</label>
-              <textarea id="message" name="message" class="form__textarea" required placeholder="How can we help you? For reservations, please include your preferred date, time, and party size..."></textarea>
+              <label class="form__label" for="contact-message">Message *</label>
+              <textarea id="contact-message" name="message" class="form__textarea" required placeholder="How can we help you? For reservations, please include your preferred date, time, and party size..."></textarea>
             </div>
 
             <div class="text-center">
@@ -182,6 +151,16 @@
     </div>
   </section>
 
+  <!-- Success Modal -->
+  <div class="modal" id="contactSuccessModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <h3 class="modal__title">Message Sent!</h3>
+      <p class="modal__message">Thank you for reaching out. We've received your message and will get back to you shortly.</p>
+      <button class="btn btn--primary modal__close" id="closeContactModal">Close</button>
+    </div>
+  </div>
+
   <!-- Map Section -->
   <section class="section section--cream">
     <div class="container">
@@ -191,20 +170,14 @@
         <div class="section-header__divider"></div>
       </div>
 
-      <div class="contact-map fade-in" style="height: 450px;">
+      <div class="contact-map fade-in" style="height: 400px;">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095919364!2d-74.00425878428698!3d40.74076904379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sus!4v1234567890"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          style="width: 100%; height: 100%; border: none; border-radius: var(--radius-md);">
+          style="width: 100%; height: 100%; border: none;">
         </iframe>
-      </div>
-
-      <div class="text-center fade-in" style="margin-top: var(--spacing-md);">
-        <p style="color: var(--color-text-light);">
-          Located in the heart of the Culinary District, we're easily accessible by subway and offer complimentary valet parking.
-        </p>
       </div>
     </div>
   </section>
