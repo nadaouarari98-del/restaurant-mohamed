@@ -1406,6 +1406,21 @@ p {
   resize: vertical;
 }
 
+.form__input--error,
+.form__textarea--error,
+.form__select--error {
+  border-color: var(--color-pomegranate);
+  box-shadow: 0 0 0 3px rgba(233, 90, 90, 0.2);
+}
+
+.form__error-message {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--color-pomegranate);
+  min-height: 1em;
+}
+
 .form__row {
   display: grid;
   grid-template-columns: 1fr;

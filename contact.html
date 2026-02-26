@@ -118,28 +118,39 @@
             <div class="form__row">
               <div class="form__group">
                 <label class="form__label" for="contact-name">Full Name *</label>
-                <input type="text" id="contact-name" name="name" class="form__input" required>
+                <input type="text" id="contact-name" name="name" class="form__input" required autocomplete="name" placeholder="Your full name">
+                <span class="form__error-message" id="contact-name-error"></span>
               </div>
               <div class="form__group">
                 <label class="form__label" for="contact-email">Email Address *</label>
-                <input type="email" id="contact-email" name="email" class="form__input" required>
+                <input type="email" id="contact-email" name="email" class="form__input" required autocomplete="email" placeholder="your@email.com">
+                <span class="form__error-message" id="contact-email-error"></span>
               </div>
             </div>
 
-            <div class="form__group">
-              <label class="form__label" for="contact-subject">Subject *</label>
-              <select id="contact-subject" name="subject" class="form__select" required>
-                <option value="">Select a subject</option>
-                <option value="reservation">Make a Reservation</option>
-                <option value="general">General Inquiry</option>
-                <option value="feedback">Feedback</option>
-                <option value="other">Other</option>
-              </select>
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" name="phone" class="form__input" autocomplete="tel" placeholder="+1 (234) 567-890">
+                <span class="form__error-message" id="contact-phone-error"></span>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="contact-subject">Subject *</label>
+                <select id="contact-subject" name="subject" class="form__select" required>
+                  <option value="">Select a subject</option>
+                  <option value="reservation">Make a Reservation</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="form__error-message" id="contact-subject-error"></span>
+              </div>
             </div>
 
             <div class="form__group">
               <label class="form__label" for="contact-message">Message *</label>
               <textarea id="contact-message" name="message" class="form__textarea" required placeholder="How can we help you? For reservations, please include your preferred date, time, and party size..."></textarea>
+              <span class="form__error-message" id="contact-message-error"></span>
             </div>
 
             <div class="text-center">
