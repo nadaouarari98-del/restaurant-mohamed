@@ -360,6 +360,18 @@ p {
   right: 0;
 }
 
+.nav-mobile__logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.nav-mobile__logo-image {
+  height: 60px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
 .nav-mobile__link {
   color: var(--color-tahini-cream);
   font-family: var(--font-heading);
