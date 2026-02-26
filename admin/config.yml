@@ -10,7 +10,7 @@ public_folder: "/images/uploads"
 site_url: https://your-site.netlify.app
 
 # Logo for the CMS
-logo_url: /images/logo-black.png
+logo_url: /images/logo-gold-terracotta.png
 
 # Collections
 collections:

@@ -257,8 +257,6 @@ p {
 .logo__image {
   height: 55px;
   width: auto;
-  filter: brightness(0) invert(1);
-  transition: filter var(--transition-normal);
 }
 
 .logo span {
@@ -1278,7 +1276,6 @@ p {
   height: 60px;
   width: auto;
   margin-bottom: var(--spacing-sm);
-  filter: brightness(0) invert(1);
 }
 
 .footer__column h4 {
