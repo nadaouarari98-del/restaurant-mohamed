@@ -53,9 +53,12 @@
     <a href="contact.html" class="nav-mobile__link">Contact</a>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Slideshow -->
   <section class="hero hero--page">
-    <div class="hero__background" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=1920&q=80');"></div>
+    <div class="hero__slideshow" id="heroSlideshow" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden;">
+      <img class="hero__slide" src="images/Managish Dining Room 4.jpg" alt="Dining Room" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.8s ease-in-out;">
+      <img class="hero__slide" src="images/Our Coffee Shop_Managish Coffee & Sweets Corner_DSC_2548.jpg" alt="Coffee Shop" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out;">
+    </div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <p class="hero__subtitle">Our Space</p>
@@ -65,8 +68,53 @@
     </div>
   </section>
 
-  <!-- Venue Inquiry Form - NOW RIGHT AFTER HERO -->
-  <section class="section section--tahini" id="inquiry">
+  <script>
+    // Hero slideshow functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.hero__slide');
+      let currentSlide = 0;
+      
+      // Preload images
+      const images = [];
+      slides.forEach(slide => {
+        const img = new Image();
+        img.src = slide.src;
+        images.push(img);
+      });
+      
+      function showSlide(n) {
+        slides.forEach(slide => slide.style.opacity = '0');
+        slides[n].style.opacity = '1';
+      }
+      
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+      
+      // Wait 1 second to ensure images are loaded, then start slideshow
+      setTimeout(() => {
+        setInterval(nextSlide, 5000);
+      }, 1000);
+    });
+  </script>
+
+  <!-- Venue Introduction - MOVED BEFORE INQUIRY FORM -->
+  <section class="section" style="background-color: #fafaf8;">
+    <div class="container text-center">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Two Moods, One Welcome</p>
+        <h2 class="section-header__title" style="font-family: 'Rosehot Serif', serif; color: #6B5344;">An Inviting Atmosphere</h2>
+        <div class="section-header__divider"></div>
+      </div>
+      <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-md); color: #6B5344; font-size: 1.05rem; line-height: 1.8;">
+        <strong>Managish offers two unique settings for two unforgettable ways to gather.</strong> Our venue suits the spectrum of events and occasions, from family celebrations, corporate receptions, or simply friends getting together.
+      </p>
+    </div>
+  </section>
+
+  <!-- Venue Inquiry Form -->
+  <section class="section section--tahini" id="inquiry" style="background-color: #fafaf8;">
     <div class="container">
       <div class="section-header fade-in">
         <p class="section-header__subtitle">Get Started</p>
@@ -190,33 +238,19 @@
       <h3 class="modal__title">Thank You!</h3>
       <p class="modal__message">Thank you for sharing your plans with us. Our team will be in touch soon. We're excited to help bring your gathering to life.</p>
       <button class="btn btn--primary modal__close" id="closeModal">Close</button>
-    </div>
   </div>
-
-  <!-- Venue Introduction -->
-  <section class="section">
-    <div class="container text-center">
-      <div class="section-header fade-in">
-        <p class="section-header__subtitle">Two Moods, One Welcome</p>
-        <h2 class="section-header__title">An Inviting Atmosphere</h2>
-        <div class="section-header__divider"></div>
-      </div>
-      <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-md); color: var(--color-text-light);">
-        <strong>Managish offers two unique settings for two unforgettable ways to gather.</strong> Our venue suits the spectrum of events and occasions, from family celebrations, corporate receptions, or simply friends getting together.
-      </p>
-    </div>
   </section>
 
   <!-- Dining Room Gallery -->
-  <section class="section section--cream">
+  <section class="section" style="background-color: #fafaf8;">
     <div class="container">
       <div class="section-header fade-in">
         <p class="section-header__subtitle">Vibrant & Rustic</p>
-        <h2 class="section-header__title">Our Dining Room</h2>
+        <h2 class="section-header__title" style="font-family: 'Rosehot Serif', serif; color: #6B5344;">Our Dining Room</h2>
         <div class="section-header__divider"></div>
       </div>
 
-      <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-lg); color: var(--color-text-light); text-align: center;">
+      <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-lg); color: #6B5344; font-size: 1.05rem; line-height: 1.8; text-align: center;">
         Our dining room is warm, welcoming, and comfortably spacious, with rustic features, an open kitchen, and a panoramic slice of life along Al Jada's East Boulevard. Designed to feel relaxed and lived-in, it suits lively gatherings and sharing large meals. Families, friends, and colleagues happily gather around generous spreads on the table, children have room to roam, candid talks flow freely, and everyone feels at ease.
       </p>
 
@@ -235,15 +269,15 @@
   </section>
 
   <!-- Coffee Shop Gallery -->
-  <section class="section">
+  <section class="section" style="background-color: #fafaf8;">
     <div class="container">
       <div class="section-header fade-in">
         <p class="section-header__subtitle">Serene & Refined</p>
-        <h2 class="section-header__title">Our Coffee Shop</h2>
+        <h2 class="section-header__title" style="font-family: 'Rosehot Serif', serif; color: #6B5344;">Our Coffee Shop</h2>
         <div class="section-header__divider"></div>
       </div>
 
-      <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-lg); color: var(--color-text-light); text-align: center;">
+      <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-lg); color: #6B5344; font-size: 1.05rem; line-height: 1.8; text-align: center;">
         Crossing over into our coffee shop, the mood turns serene and the hours follow a gentler rhythm. Anchored by an elegant coffee bar, the space is soulful and softly nostalgic, designed for conversation and the rituals of coffee and sweets. Arabic pastries, specialty coffee, and classic cakes are served throughout the day, creating a setting that invites guests to sit closer and enjoy the simple pleasure of enjoying the present moment together.
       </p>
 
@@ -262,11 +296,11 @@
   </section>
 
   <!-- Venue Features -->
-  <section class="section section--cream">
+  <section class="section" style="background-color: #fafaf8;">
     <div class="container">
       <div class="section-header fade-in">
         <p class="section-header__subtitle">What We Offer</p>
-        <h2 class="section-header__title">Venue Features</h2>
+        <h2 class="section-header__title" style="font-family: 'Rosehot Serif', serif; color: #6B5344;">Venue Features</h2>
         <div class="section-header__divider"></div>
       </div>
 
@@ -312,25 +346,14 @@
         <div class="footer__column">
           <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="MANAGISH مناقيش" class="footer__logo">
           <p>
-            Authentic Lebanese cuisine where traditional recipes meet modern presentation.
-            Experience the taste of Lebanon at MANAGISH.
+            Authentic Turkish and Lebanese cuisine. Celebrating tradition through modern expression.
           </p>
           <div class="footer__social">
-            <a href="#" aria-label="Facebook">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
-              </svg>
-            </a>
-            <a href="#" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
-                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
-                <circle cx="18" cy="6" r="1"/>
-              </svg>
-            </a>
-            <a href="#" aria-label="Twitter">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+            <a href="#" aria-label="Instagram" class="footer__social-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <circle cx="17.5" cy="6.5" r="1.5"/>
               </svg>
             </a>
           </div>
@@ -351,22 +374,23 @@
         <div class="footer__column">
           <h4>Opening Hours</h4>
           <ul>
-            <li>Monday - Friday</li>
-            <li>11:30 AM - 10:00 PM</li>
+            <li><strong>Ramadan Hours:</strong></li>
+            <li>Delivery & Takeaway: 4pm - 2:45am</li>
+            <li>Dine-in: After Maghrib - 3am</li>
             <li>&nbsp;</li>
-            <li>Saturday - Sunday</li>
-            <li>10:00 AM - 11:00 PM</li>
+            <li><strong>Regular Hours:</strong></li>
+            <li>7am - 1am daily</li>
           </ul>
         </div>
 
         <!-- Contact & Map Column -->
         <div class="footer__column">
-          <h4>Find Us</h4>
+          <h4>Get in Touch</h4>
           <p>
-            Nest 5 Aljada<br>
-            Dubai, UAE<br>
-            <a href="tel:+971xxxx">Phone: Contact Us</a><br>
-            <a href="mailto:hello@managish.com">hello@managish.com</a>
+            Nest 5, Aljada<br>
+            Sharjah, UAE<br>
+            <a href="tel:+971065699255">+971 (06) 569 9255</a><br>
+            <a href="mailto:info@managish.com">info@managish.com</a>
           </p>
           <div class="footer__map">
             <iframe

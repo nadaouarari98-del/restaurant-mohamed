@@ -53,9 +53,12 @@
     <a href="contact.html" class="nav-mobile__link">Contact</a>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Slideshow -->
   <section class="hero" id="hero">
-    <div class="hero__background"></div>
+    <div class="hero__slideshow" id="heroSlideshow" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden;">
+      <img class="hero__slide" src="images/Managish Dining Room 4.jpg" alt="Dining Room" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.8s ease-in-out;">
+      <img class="hero__slide" src="images/Our Coffee Shop_Managish Coffee & Sweets Corner_DSC_2548.jpg" alt="Coffee Shop" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out;">
+    </div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <p class="hero__subtitle" style="margin-top: 3rem;">Welcome to</p>
@@ -68,6 +71,37 @@
       </div>
     </div>
   </section>
+
+  <script>
+    // Hero slideshow functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.hero__slide');
+      let currentSlide = 0;
+      
+      // Preload images
+      const images = [];
+      slides.forEach(slide => {
+        const img = new Image();
+        img.src = slide.src;
+        images.push(img);
+      });
+      
+      function showSlide(n) {
+        slides.forEach(slide => slide.style.opacity = '0');
+        slides[n].style.opacity = '1';
+      }
+      
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+      
+      // Wait 1 second to ensure images are loaded, then start slideshow
+      setTimeout(() => {
+        setInterval(nextSlide, 5000);
+      }, 1000);
+    });
+  </script>
 
   <!-- Venue Showcase Section -->
   <section class="section" id="venue-preview">
@@ -160,8 +194,8 @@
       </div>
 
       <div class="text-center" style="margin-top: var(--spacing-lg); display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="images/menu-english.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--primary">English Menu</a>
-        <a href="images/menu-arabic.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Arabic Menu</a>
+        <a href="https://drive.google.com/file/d/1Nb2lEo_sbOae8YklsiakuYya8xRzREC7/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn btn--primary">English Menu</a>
+        <a href="https://drive.google.com/file/d/17l7UtIKvk-bZ8hGCM4DMjgAd6scWxYuj/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Arabic Menu</a>
       </div>
     </div>
   </section>
@@ -169,22 +203,16 @@
   <!-- Catering & Events Section -->
   <section class="section section--dark" id="catering-preview">
     <div class="container">
-      <div class="catering">
-        <div class="catering__image fade-in-left">
-          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" alt="Catering spread">
-        </div>
-        <div class="catering__content fade-in-right">
-          <p class="section-header__subtitle">Our Catering Service</p>
-          <h2 style="color: var(--color-white); margin-bottom: var(--spacing-sm);">Premium, reliable, satisfying.</h2>
-          <p class="catering__text" style="color: rgba(255,255,255,0.8);">
-            Bring the MANAGISH experience to your event. Our catering team crafts
-            bespoke menus that reflect your taste and exceed expectations.
-          </p>
-          <p class="catering__text" style="color: rgba(255,255,255,0.8);">
-            Entrust your event to our catering team. From menu planning to the full dining set-up and through to coffee and dessert service, we take care of the details so your guests enjoy the moment as you host with ease.
-          </p>
-          <a href="catering.html" class="btn btn--primary">Plan Your Event</a>
-        </div>
+      <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+        <p class="section-header__subtitle" style="color: rgba(255,255,255,0.9);">Our Catering Service</p>
+        <h2 style="color: #ffffff; margin-bottom: var(--spacing-md); font-size: 2.5rem;">Premium, reliable, satisfying.</h2>
+        <p class="catering__text" style="color: rgba(255,255,255,0.95); font-size: 1.1rem; line-height: 1.8; margin-bottom: var(--spacing-md);">
+          Delight your event guests with a memorable Managish experience through customized menus that reflect your taste and excite every palate.
+        </p>
+        <p class="catering__text" style="color: rgba(255,255,255,0.95); font-size: 1.1rem; line-height: 1.8; margin-bottom: var(--spacing-lg);">
+          Entrust your event to our catering team. From menu planning to the full dining set-up and through to coffee and dessert service, we take care of the details so your guests enjoy the moment as you host with ease.
+        </p>
+        <a href="catering.html" class="btn btn--primary">Let's Plan Your Event</a>
       </div>
     </div>
   </section>
@@ -204,33 +232,24 @@
         </p>
 
         <div class="delivery__options">
-          <a href="#" class="delivery-option fade-in" target="_blank" rel="noopener noreferrer">
-            <div class="delivery-option__logo">
-              <img src="images/delivery-app-1.svg" alt="Delivery App 1">
-            </div>
+          <div class="delivery-option fade-in">
             <h3 class="delivery-option__title">Pickup</h3>
             <p class="delivery-option__text">Order ahead and collect your meal fresh from our kitchen</p>
-          </a>
+          </div>
 
-          <a href="#" class="delivery-option fade-in" target="_blank" rel="noopener noreferrer">
-            <div class="delivery-option__logo">
-              <img src="images/delivery-app-2.svg" alt="Delivery App 2">
-            </div>
+          <div class="delivery-option fade-in">
             <h3 class="delivery-option__title">Delivery</h3>
             <p class="delivery-option__text">Fast delivery within 5km radius</p>
-          </a>
+          </div>
 
-          <a href="#" class="delivery-option fade-in" target="_blank" rel="noopener noreferrer">
-            <div class="delivery-option__logo">
-              <img src="images/delivery-app-3.svg" alt="Delivery App 3">
-            </div>
+          <div class="delivery-option fade-in">
             <h3 class="delivery-option__title">Meal Kits</h3>
             <p class="delivery-option__text">Chef-curated ingredients with step-by-step recipes</p>
-          </a>
+          </div>
         </div>
 
         <div class="text-center fade-in" style="margin-top: var(--spacing-lg);">
-          <a href="menu.html" class="btn btn--dark">Order Now</a>
+          <a href="order.html" class="btn btn--dark">Order Now</a>
         </div>
       </div>
     </div>
@@ -244,8 +263,7 @@
         <div class="footer__column">
           <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="MANAGISH مناقيش" class="footer__logo">
           <p>
-            Authentic Lebanese cuisine where traditional recipes meet modern presentation.
-            Experience the taste of Lebanon at MANAGISH.
+            Authentic Turkish and Lebanese cuisine. Celebrating tradition through modern expression.
           </p>
           <div class="footer__social">
             <a href="#" aria-label="Instagram" class="footer__social-link">
@@ -273,22 +291,23 @@
         <div class="footer__column">
           <h4>Opening Hours</h4>
           <ul>
-            <li>Monday - Friday</li>
-            <li>11:30 AM - 10:00 PM</li>
+            <li><strong>Ramadan Hours:</strong></li>
+            <li>Delivery & Takeaway: 4pm - 2:45am</li>
+            <li>Dine-in: After Maghrib - 3am</li>
             <li>&nbsp;</li>
-            <li>Saturday - Sunday</li>
-            <li>10:00 AM - 11:00 PM</li>
+            <li><strong>Regular Hours:</strong></li>
+            <li>7am - 1am daily</li>
           </ul>
         </div>
 
         <!-- Contact & Map Column -->
         <div class="footer__column">
-          <h4>Find Us</h4>
+          <h4>Get in Touch</h4>
           <p>
-            Nest 5 Aljada<br>
-            Dubai, UAE<br>
-            <a href="tel:+971xxxx">Phone: Contact Us</a><br>
-            <a href="mailto:hello@managish.com">hello@managish.com</a>
+            Nest 5, Aljada<br>
+            Sharjah, UAE<br>
+            <a href="tel:+971065699255">+971 (06) 569 9255</a><br>
+            <a href="mailto:info@managish.com">info@managish.com</a>
           </p>
           <div class="footer__map">
             <iframe
