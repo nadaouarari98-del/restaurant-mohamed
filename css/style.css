@@ -7,24 +7,24 @@
   --color-secondary: #2d2d2d;
   --color-accent: #C56A3D;
   --color-accent-light: #C56A3D;
-  --color-cream: #F6E3D4;
-  --color-white: #ffffff;
+  --color-cream: #F9F7F4;
+  --color-white: #F9F7F4;
 
   /* 3 Text Colors Only */
-  --color-text: #9A6A43;          /* Dark Brown - headings, primary text */
+  --color-text: #333333;          /* Dark text for better contrast on off-white */
   --color-text-light: #C56A3D;    /* Orange - secondary text, highlights */
-  --color-text-cream: #F6E3D4;    /* Cream - light text on dark backgrounds */
-  --color-overlay: rgba(154, 106, 67, 0.4);
+  --color-text-cream: #F9F7F4;    /* Off-white - light text on dark backgrounds */
+  --color-overlay: rgba(51, 51, 51, 0.4);
 
   /* All other colors mapped to the 3 main colors */
   --color-fayrooz-teal: #C56A3D;
   --color-managish-amber: #C56A3D;
-  --color-tahini-cream: #F6E3D4;
-  --color-olive-wood: #9A6A43;
-  --color-levant-brick: #9A6A43;
+  --color-tahini-cream: #F9F7F4;
+  --color-olive-wood: #333333;
+  --color-levant-brick: #333333;
   --color-olive-leaf: #C56A3D;
   --color-fresh-herb: #C56A3D;
-  --color-pomegranate: #9A6A43;
+  --color-pomegranate: #333333;
 
   /* Typography */
   --font-heading: 'Playfair Display', serif;
@@ -74,7 +74,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-text);
-  background-color: var(--color-white);
+  background-color: #F9F7F4;
   overflow-x: hidden;
 }
 
