@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium Lebanese catering services by MANAGISH (مناقيش) for corporate events, weddings, and private parties.">
+  <title>Catering Services | MANAGISH مناقيش</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" class="logo__image" style="height: 100px; width: auto;">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li><a href="about.html" class="nav__link">About</a></li>
+            <li><a href="menu.html" class="nav__link">Menu</a></li>
+            <li><a href="venue.html" class="nav__link">Venue</a></li>
+            <li><a href="catering.html" class="nav__link nav__link--active">Catering</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html" class="nav-mobile__link">Home</a>
+    <a href="about.html" class="nav-mobile__link">About</a>
+    <a href="menu.html" class="nav-mobile__link">Menu</a>
+    <a href="venue.html" class="nav-mobile__link">Venue</a>
+    <a href="catering.html" class="nav-mobile__link">Catering</a>
+    <a href="contact.html" class="nav-mobile__link">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero hero--page">
+    <div class="hero__background" style="background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?w=1920&q=80');"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__subtitle">Exceptional Events</p>
+      <h1 class="hero__title" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+        <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" style="height: 200px; width: auto;">
+      </h1>
+    </div>
+  </section>
+
+  <!-- Catering Introduction -->
+  <section class="section">
+    <div class="container text-center">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Culinary Excellence, Delivered</p>
+        <h2 class="section-header__title">Unforgettable Catering</h2>
+        <div class="section-header__divider"></div>
+      </div>
+      <p class="fade-in" style="max-width: 700px; margin: 0 auto; color: var(--color-text-light);">
+        Bring the MANAGISH experience to your next event. Our catering team crafts bespoke menus
+        for every occasion, from intimate gatherings to grand celebrations.
+      </p>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- Catering Inquiry Form -->
+  <section class="section section--cream" id="inquiry">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Let's Plan Together</p>
+        <h2 class="section-header__title">Catering Inquiry</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <form class="form fade-in" name="catering-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="catering-inquiry">
+        <p style="display: none;">
+          <label>Don't fill this out if you're human: <input name="bot-field"></label>
+        </p>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="name">Full Name *</label>
+            <input type="text" id="name" name="name" class="form__input" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="email">Email Address *</label>
+            <input type="email" id="email" name="email" class="form__input" required>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" class="form__input" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="event-type">Event Type *</label>
+            <select id="event-type" name="event-type" class="form__select" required>
+              <option value="">Select event type</option>
+              <option value="corporate">Corporate Event</option>
+              <option value="wedding">Wedding</option>
+              <option value="birthday">Birthday Party</option>
+              <option value="anniversary">Anniversary</option>
+              <option value="gala">Gala Dinner</option>
+              <option value="holiday">Holiday Party</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="event-date">Event Date *</label>
+            <input type="date" id="event-date" name="event-date" class="form__input" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="guest-count">Estimated Guest Count *</label>
+            <select id="guest-count" name="guest-count" class="form__select" required>
+              <option value="">Select guest count</option>
+              <option value="25-50">25 - 50 guests</option>
+              <option value="51-100">51 - 100 guests</option>
+              <option value="101-200">101 - 200 guests</option>
+              <option value="201-300">201 - 300 guests</option>
+              <option value="300+">300+ guests</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="venue">Event Venue</label>
+            <input type="text" id="venue" name="venue" class="form__input" placeholder="Your venue or 'MANAGISH'">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="budget">Budget Range *</label>
+            <select id="budget" name="budget" class="form__select" required>
+              <option value="">Select budget range</option>
+              <option value="under-5k">Under $5,000</option>
+              <option value="5k-10k">$5,000 - $10,000</option>
+              <option value="10k-25k">$10,000 - $25,000</option>
+              <option value="25k-50k">$25,000 - $50,000</option>
+              <option value="50k+">$50,000+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="message">Tell Us About Your Event *</label>
+          <textarea id="message" name="message" class="form__textarea" required placeholder="Share your vision, dietary requirements, style preferences, and any special requests..."></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn--primary">Submit Inquiry</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- About Column -->
+        <div class="footer__column">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="MANAGISH مناقيش" class="footer__logo">
+          <p>
+            Authentic Lebanese cuisine where traditional recipes meet modern presentation.
+            Experience the taste of Lebanon at MANAGISH.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram" style="color: #E8D4B8;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="18" cy="6" r="1"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer__column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="venue.html">Venue Rental</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours Column -->
+        <div class="footer__column">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li>Monday - Friday</li>
+            <li>11:30 AM - 10:00 PM</li>
+            <li>&nbsp;</li>
+            <li>Saturday - Sunday</li>
+            <li>10:00 AM - 11:00 PM</li>
+          </ul>
+        </div>
+
+        <!-- Contact & Map Column -->
+        <div class="footer__column">
+          <h4>Find Us</h4>
+          <p>
+            Nest 5 Aljada<br>
+            Dubai, UAE<br>
+            <a href="tel:+971xxxx">Phone: Contact Us</a><br>
+            <a href="mailto:hello@managish.com">hello@managish.com</a>
+          </p>
+          <div class="footer__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.7527169677563!2d55.47648772346892!3d25.321269268656463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5fbe736b2dcb%3A0xd7f63ca6ab71def7!2sManagish%20Aljada!5e0!3m2!1sen!2sae!4v1672531234567"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 MANAGISH. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

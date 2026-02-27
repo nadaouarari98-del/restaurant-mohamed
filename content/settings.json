@@ -1,0 +1,22 @@
+{
+  "restaurant_name": "MANAGISH",
+  "restaurant_name_arabic": "مناقيش",
+  "tagline": "Authentic Lebanese cuisine crafted with passion",
+  "phone": "+971 (0) Contact Us",
+  "email": "hello@managish.com",
+  "address": {
+    "street": "Nest 5 Aljada",
+    "city": "Dubai",
+    "state": "UAE",
+    "zip": ""
+  },
+  "opening_hours": {
+    "weekday": "11:30 AM - 10:00 PM",
+    "weekend": "10:00 AM - 11:00 PM"
+  },
+  "social_links": {
+    "facebook": "https://facebook.com/managish",
+    "instagram": "https://instagram.com/managish",
+    "twitter": "https://twitter.com/managish"
+  }
+}

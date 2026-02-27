@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience authentic Lebanese cuisine at MANAGISH (مناقيش) - Fresh manakish, fine dining, elegant venue rentals, and premium catering services.">
+  <title>MANAGISH مناقيش | Authentic Lebanese Restaurant</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=11">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" class="logo__image" style="height: 100px; width: auto;">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+            <li><a href="about.html" class="nav__link">About</a></li>
+            <li><a href="menu.html" class="nav__link">Menu</a></li>
+            <li><a href="venue.html" class="nav__link">Venue</a></li>
+            <li><a href="catering.html" class="nav__link">Catering</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html" class="nav-mobile__link">Home</a>
+    <a href="about.html" class="nav-mobile__link">About</a>
+    <a href="menu.html" class="nav-mobile__link">Menu</a>
+    <a href="venue.html" class="nav-mobile__link">Venue</a>
+    <a href="catering.html" class="nav-mobile__link">Catering</a>
+    <a href="contact.html" class="nav-mobile__link">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero__background"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__subtitle" style="margin-top: 3rem;">Welcome to</p>
+      <h1 class="hero__title" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+        <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" style="height: 280px; width: auto; filter: drop-shadow(0 4px 24px rgba(0,0,0,0.5));">
+      </h1>
+      <p class="hero__tagline">Turkish and Lebanese traditions, hand-crafted for today's table</p>
+      <div class="hero__buttons" style="margin-top: 1rem;">
+        <a href="venue.html" class="btn btn--primary">Dine with us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Venue Showcase Section -->
+  <section class="section" id="venue-preview">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Our Space</p>
+        <h2 class="section-header__title">A Versatile & Unique Venue</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <div class="venue-split fade-in">
+        <!-- Dining Room -->
+        <div class="venue-split__panel">
+          <div class="venue-split__image-wrap">
+            <img src="images/Managish Dining Room 4.jpg" alt="Managish Dining Room">
+          </div>
+          <div class="venue-split__label">
+            <h3 class="venue-split__name">Our dining room</h3>
+            <p class="venue-split__desc">Settle into our wood-and-brick space with a cinematic view of Al Jada's East Boulevard. Cozy and well-composed, it's designed for easy conversation and gathering around the table.</p>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="venue-split__divider"></div>
+
+        <!-- Coffee Shop -->
+        <div class="venue-split__panel">
+          <div class="venue-split__image-wrap">
+            <img src="images/Our Coffee Shop_Managish Coffee & Sweets Corner_DSC_2548.jpg" alt="Managish Coffee Shop">
+          </div>
+          <div class="venue-split__label">
+            <h3 class="venue-split__name">Our coffee shop</h3>
+            <p class="venue-split__desc">Step into a softly nostalgic, soulful space. With Arabic pastries, specialty coffee, and classic desserts, it's your hideaway for quieter talks and savoring something sweet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--spacing-lg);">
+        <a href="contact.html#reservation" class="btn btn--primary" style="min-width: 160px; margin-right: 1rem;">Book a Table</a>
+        <a href="venue.html" class="btn btn--dark" style="min-width: 160px;">Rent Our Space</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Highlights Section -->
+  <section class="section section--cream" id="menu-highlights">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Our Menu</p>
+        <h2 class="section-header__title">Turkish & Lebanese Creations</h2>
+        <div class="section-header__divider"></div>
+        <p style="max-width: 600px; margin: var(--spacing-md) auto 0; color: var(--color-text-light);">Generous portions for grazing and gathering. A rich selection of oven-fresh flat breads, all-day breakfast trays, feel-good street food, grills, and classic western comforts.</p>
+      </div>
+
+      <div class="carousel-wrapper">
+        <div class="carousel" id="menuCarousel">
+          <div class="carousel__item fade-in">
+            <img src="images/1-breakfast-tray.jpg" alt="Breakfast Tray">
+            <p class="carousel__label">Breakfast Tray</p>
+          </div>
+          <div class="carousel__item fade-in">
+            <img src="images/2-manoushi.jpg" alt="Manoushi">
+            <p class="carousel__label">Manoushi</p>
+          </div>
+          <div class="carousel__item fade-in">
+            <img src="images/3-fawal.jpg" alt="Fawal">
+            <p class="carousel__label">Fawal</p>
+          </div>
+          <div class="carousel__item fade-in">
+            <img src="images/4-appetizers.jpg" alt="Appetizers">
+            <p class="carousel__label">Appetizers</p>
+          </div>
+          <div class="carousel__item fade-in">
+            <img src="images/5-sandwiches.jpg" alt="Sandwiches">
+            <p class="carousel__label">Sandwiches</p>
+          </div>
+          <div class="carousel__item fade-in">
+            <img src="images/6-pide.jpg" alt="Pide">
+            <p class="carousel__label">Pide</p>
+          </div>
+          <div class="carousel__item fade-in">
+            <img src="images/7-burgers.jpg" alt="Burgers">
+            <p class="carousel__label">Burgers</p>
+          </div>
+          <div class="carousel__item fade-in">
+            <img src="images/8-grills.jpg" alt="Grills">
+            <p class="carousel__label">Grills</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--spacing-lg); display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="images/menu-english.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--primary">English Menu</a>
+        <a href="images/menu-arabic.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Arabic Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering & Events Section -->
+  <section class="section section--dark" id="catering-preview">
+    <div class="container">
+      <div class="catering">
+        <div class="catering__image fade-in-left">
+          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" alt="Catering spread">
+        </div>
+        <div class="catering__content fade-in-right">
+          <p class="section-header__subtitle">Our Catering Service</p>
+          <h2 style="color: var(--color-white); margin-bottom: var(--spacing-sm);">Premium, reliable, satisfying.</h2>
+          <p class="catering__text" style="color: rgba(255,255,255,0.8);">
+            Bring the MANAGISH experience to your event. Our catering team crafts
+            bespoke menus that reflect your taste and exceed expectations.
+          </p>
+          <p class="catering__text" style="color: rgba(255,255,255,0.8);">
+            Entrust your event to our catering team. From menu planning to the full dining set-up and through to coffee and dessert service, we take care of the details so your guests enjoy the moment as you host with ease.
+          </p>
+          <a href="catering.html" class="btn btn--primary">Plan Your Event</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delivery & Takeaway Section -->
+  <section class="section" id="delivery">
+    <div class="container">
+      <div class="delivery">
+        <div class="section-header fade-in">
+          <p class="section-header__subtitle">At Your Doorstep</p>
+          <h2 class="section-header__title">Delivery & Takeaway</h2>
+          <div class="section-header__divider"></div>
+        </div>
+
+        <p class="fade-in" style="max-width: 600px; margin: 0 auto var(--spacing-md); color: var(--color-text-light);">
+          Enjoy our oven-fresh flat breads, all-day breakfast trays, feel-good street food, and classic western comforts, alongside desserts by Fayrooz. Call for pick up or order through delivery channels.
+        </p>
+
+        <div class="delivery__options">
+          <a href="#" class="delivery-option fade-in" target="_blank" rel="noopener noreferrer">
+            <div class="delivery-option__logo">
+              <img src="images/delivery-app-1.svg" alt="Delivery App 1">
+            </div>
+            <h3 class="delivery-option__title">Pickup</h3>
+            <p class="delivery-option__text">Order ahead and collect your meal fresh from our kitchen</p>
+          </a>
+
+          <a href="#" class="delivery-option fade-in" target="_blank" rel="noopener noreferrer">
+            <div class="delivery-option__logo">
+              <img src="images/delivery-app-2.svg" alt="Delivery App 2">
+            </div>
+            <h3 class="delivery-option__title">Delivery</h3>
+            <p class="delivery-option__text">Fast delivery within 5km radius</p>
+          </a>
+
+          <a href="#" class="delivery-option fade-in" target="_blank" rel="noopener noreferrer">
+            <div class="delivery-option__logo">
+              <img src="images/delivery-app-3.svg" alt="Delivery App 3">
+            </div>
+            <h3 class="delivery-option__title">Meal Kits</h3>
+            <p class="delivery-option__text">Chef-curated ingredients with step-by-step recipes</p>
+          </a>
+        </div>
+
+        <div class="text-center fade-in" style="margin-top: var(--spacing-lg);">
+          <a href="menu.html" class="btn btn--dark">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- About Column -->
+        <div class="footer__column">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="MANAGISH مناقيش" class="footer__logo">
+          <p>
+            Authentic Lebanese cuisine where traditional recipes meet modern presentation.
+            Experience the taste of Lebanon at MANAGISH.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram" class="footer__social-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <circle cx="17.5" cy="6.5" r="1.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer__column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="venue.html">Venue Rental</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours Column -->
+        <div class="footer__column">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li>Monday - Friday</li>
+            <li>11:30 AM - 10:00 PM</li>
+            <li>&nbsp;</li>
+            <li>Saturday - Sunday</li>
+            <li>10:00 AM - 11:00 PM</li>
+          </ul>
+        </div>
+
+        <!-- Contact & Map Column -->
+        <div class="footer__column">
+          <h4>Find Us</h4>
+          <p>
+            Nest 5 Aljada<br>
+            Dubai, UAE<br>
+            <a href="tel:+971xxxx">Phone: Contact Us</a><br>
+            <a href="mailto:hello@managish.com">hello@managish.com</a>
+          </p>
+          <div class="footer__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.7527169677563!2d55.47648772346892!3d25.321269268656463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5fbe736b2dcb%3A0xd7f63ca6ab71def7!2sManagish%20Aljada!5e0!3m2!1sen!2sae!4v1672531234567"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 MANAGISH. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rent our stunning venue for weddings, corporate events, and private celebrations at MANAGISH (مناقيش).">
+  <title>Venue Rental | MANAGISH مناقيش</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" class="logo__image" style="height: 100px; width: auto;">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li><a href="about.html" class="nav__link">About</a></li>
+            <li><a href="menu.html" class="nav__link">Menu</a></li>
+            <li><a href="venue.html" class="nav__link nav__link--active">Venue</a></li>
+            <li><a href="catering.html" class="nav__link">Catering</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html" class="nav-mobile__link">Home</a>
+    <a href="about.html" class="nav-mobile__link">About</a>
+    <a href="menu.html" class="nav-mobile__link">Menu</a>
+    <a href="venue.html" class="nav-mobile__link">Venue</a>
+    <a href="catering.html" class="nav-mobile__link">Catering</a>
+    <a href="contact.html" class="nav-mobile__link">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero hero--page">
+    <div class="hero__background" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=1920&q=80');"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__subtitle">Our Space</p>
+      <h1 class="hero__title" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+        <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" style="height: 200px; width: auto;">
+      </h1>
+    </div>
+  </section>
+
+  <!-- Venue Inquiry Form - NOW RIGHT AFTER HERO -->
+  <section class="section section--tahini" id="inquiry">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Get Started</p>
+        <h2 class="section-header__title">Venue Inquiry</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <form class="form form--venue fade-in" id="venueForm" name="venue-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="venue-inquiry">
+        <p style="display: none;">
+          <label>Don't fill this out if you're human: <input name="bot-field"></label>
+        </p>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="name">Your Name *</label>
+            <input type="text" id="name" name="name" class="form__input" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="email">Email *</label>
+            <input type="email" id="email" name="email" class="form__input" required>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="phone">Mobile No. *</label>
+            <input type="tel" id="phone" name="phone" class="form__input" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="event-date">Preferred Event Date *</label>
+            <input type="date" id="event-date" name="event-date" class="form__input" required>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="event-time">Preferred Event Time *</label>
+            <select id="event-time" name="event-time" class="form__select" required>
+              <option value="">Select time</option>
+              <option value="morning">Morning</option>
+              <option value="noon">Noon</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="evening">Evening</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="occasion">Occasion *</label>
+            <select id="occasion" name="occasion" class="form__select" required>
+              <option value="">Select occasion</option>
+              <option value="private-dining">Private Dining</option>
+              <option value="corporate">Corporate Event</option>
+              <option value="wedding">Wedding Reception</option>
+              <option value="birthday">Birthday Party</option>
+              <option value="anniversary">Anniversary</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="guest-count">Estimated Guest Count *</label>
+            <select id="guest-count" name="guest-count" class="form__select" required>
+              <option value="">Select guest count</option>
+              <option value="1-10">1 - 10</option>
+              <option value="11-25">11 - 25</option>
+              <option value="26-50">26 - 50</option>
+              <option value="51-100">51 - 100</option>
+              <option value="100+">100+</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="preferred-section">Preferred Section *</label>
+            <select id="preferred-section" name="preferred-section" class="form__select" required>
+              <option value="">Select section</option>
+              <option value="dining-room">Dining Room</option>
+              <option value="coffee-shop">Coffee Shop</option>
+              <option value="outdoor">Outdoor</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="menu-selection">Menu Selection *</label>
+          <select id="menu-selection" name="menu-selection" class="form__select" required>
+            <option value="">Select menu type</option>
+            <option value="light-bites">Light Bites</option>
+            <option value="sharing-plates">Sharing Plates</option>
+            <option value="full-dining">Full Dining Menu</option>
+          </select>
+        </div>
+
+        <div class="form__checkboxes">
+          <label class="form__checkbox">
+            <input type="checkbox" name="include-desserts" value="yes">
+            <span class="form__checkbox-text">Include Desserts</span>
+          </label>
+          <label class="form__checkbox">
+            <input type="checkbox" name="include-drinks" value="yes">
+            <span class="form__checkbox-text">Include Drinks</span>
+          </label>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="message">Additional Details</label>
+          <textarea id="message" name="message" class="form__textarea" placeholder="Tell us about your event vision, special requirements, or any questions you have..."></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn--primary">Submit Inquiry</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <h3 class="modal__title">Thank You!</h3>
+      <p class="modal__message">Thank you for sharing your plans with us. Our team will be in touch soon. We're excited to help bring your gathering to life.</p>
+      <button class="btn btn--primary modal__close" id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <!-- Venue Introduction -->
+  <section class="section">
+    <div class="container text-center">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Two Moods, One Welcome</p>
+        <h2 class="section-header__title">An Inviting Atmosphere</h2>
+        <div class="section-header__divider"></div>
+      </div>
+      <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-md); color: var(--color-text-light);">
+        <strong>Managish offers two unique settings for two unforgettable ways to gather.</strong> Our venue suits the spectrum of events and occasions, from family celebrations, corporate receptions, or simply friends getting together.
+      </p>
+    </div>
+  </section>
+
+  <!-- Dining Room Gallery -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Vibrant & Rustic</p>
+        <h2 class="section-header__title">Our Dining Room</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-lg); color: var(--color-text-light); text-align: center;">
+        Our dining room is warm, welcoming, and comfortably spacious, with rustic features, an open kitchen, and a panoramic slice of life along Al Jada's East Boulevard. Designed to feel relaxed and lived-in, it suits lively gatherings and sharing large meals. Families, friends, and colleagues happily gather around generous spreads on the table, children have room to roam, candid talks flow freely, and everyone feels at ease.
+      </p>
+
+      <div class="venue-gallery fade-in">
+        <div class="venue-gallery__item venue-gallery__item--featured">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Dining room main view">
+        </div>
+        <div class="venue-gallery__item">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80" alt="Dining room seating">
+        </div>
+        <div class="venue-gallery__item">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=80" alt="Dining room atmosphere">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coffee Shop Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Serene & Refined</p>
+        <h2 class="section-header__title">Our Coffee Shop</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-lg); color: var(--color-text-light); text-align: center;">
+        Crossing over into our coffee shop, the mood turns serene and the hours follow a gentler rhythm. Anchored by an elegant coffee bar, the space is soulful and softly nostalgic, designed for conversation and the rituals of coffee and sweets. Arabic pastries, specialty coffee, and classic cakes are served throughout the day, creating a setting that invites guests to sit closer and enjoy the simple pleasure of enjoying the present moment together.
+      </p>
+
+      <div class="venue-gallery fade-in">
+        <div class="venue-gallery__item venue-gallery__item--featured">
+          <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=800&q=80" alt="Coffee shop bar area">
+        </div>
+        <div class="venue-gallery__item">
+          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=400&q=80" alt="Coffee shop seating">
+        </div>
+        <div class="venue-gallery__item">
+          <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&q=80" alt="Coffee shop ambiance">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Venue Features -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">What We Offer</p>
+        <h2 class="section-header__title">Venue Features</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <div class="venue-features">
+        <div class="venue-feature fade-in">
+          <div class="venue-feature__icon">📍</div>
+          <h3 class="venue-feature__title">Prime Location</h3>
+          <p class="venue-feature__text">Centrally located with easy access to public transportation</p>
+        </div>
+
+        <div class="venue-feature fade-in">
+          <div class="venue-feature__icon">🎨</div>
+          <h3 class="venue-feature__title">Aesthetic Interiors</h3>
+          <p class="venue-feature__text">Beautifully designed space with elegant décor and ambient lighting</p>
+        </div>
+
+        <div class="venue-feature fade-in">
+          <div class="venue-feature__icon">☀️</div>
+          <h3 class="venue-feature__title">Terrace Seating</h3>
+          <p class="venue-feature__text">Enjoy al fresco dining on our stunning outdoor terrace</p>
+        </div>
+
+        <div class="venue-feature fade-in">
+          <div class="venue-feature__icon">👨‍🍳</div>
+          <h3 class="venue-feature__title">Full Kitchen</h3>
+          <p class="venue-feature__text">On-site professional kitchen for freshly prepared cuisine</p>
+        </div>
+
+        <div class="venue-feature fade-in">
+          <div class="venue-feature__icon">☕</div>
+          <h3 class="venue-feature__title">Specialty Coffee Bar</h3>
+          <p class="venue-feature__text">Artisan coffee and beverages crafted by expert baristas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- About Column -->
+        <div class="footer__column">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="MANAGISH مناقيش" class="footer__logo">
+          <p>
+            Authentic Lebanese cuisine where traditional recipes meet modern presentation.
+            Experience the taste of Lebanon at MANAGISH.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="18" cy="6" r="1"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer__column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="venue.html">Venue Rental</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours Column -->
+        <div class="footer__column">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li>Monday - Friday</li>
+            <li>11:30 AM - 10:00 PM</li>
+            <li>&nbsp;</li>
+            <li>Saturday - Sunday</li>
+            <li>10:00 AM - 11:00 PM</li>
+          </ul>
+        </div>
+
+        <!-- Contact & Map Column -->
+        <div class="footer__column">
+          <h4>Find Us</h4>
+          <p>
+            Nest 5 Aljada<br>
+            Dubai, UAE<br>
+            <a href="tel:+971xxxx">Phone: Contact Us</a><br>
+            <a href="mailto:hello@managish.com">hello@managish.com</a>
+          </p>
+          <div class="footer__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.7527169677563!2d55.47648772346892!3d25.321269268656463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5fbe736b2dcb%3A0xd7f63ca6ab71def7!2sManagish%20Aljada!5e0!3m2!1sen!2sae!4v1672531234567"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 MANAGISH. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
