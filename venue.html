@@ -117,7 +117,7 @@
   <section class="section section--tahini" id="inquiry" style="background-color: #fafaf8;">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-header__subtitle">Get Started</p>
+        <p class="section-header__subtitle">LET’S PLAN YOUR EVENT</p>
         <h2 class="section-header__title">Venue Inquiry</h2>
         <div class="section-header__divider"></div>
       </div>
@@ -241,7 +241,7 @@
     </div>
   </div>
 
-  <!-- Dining Room Gallery -->
+  <!-- Dining Room Gallery Carousel -->
   <section class="section" style="background-color: #fafaf8;">
     <div class="container">
       <div class="section-header fade-in">
@@ -254,19 +254,50 @@
         Our dining room is warm, welcoming, and comfortably spacious, with rustic features, an open kitchen, and a panoramic slice of life along Al Jada's East Boulevard. Designed to feel relaxed and lived-in, it suits lively gatherings and sharing large meals. Families, friends, and colleagues happily gather around generous spreads on the table, children have room to roam, candid talks flow freely, and everyone feels at ease.
       </p>
 
-      <div class="venue-gallery fade-in">
-        <div class="venue-gallery__item venue-gallery__item--featured">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Dining room main view">
+      <!-- Carousel Container -->
+      <div class="dining-carousel-wrapper fade-in" style="margin-top: var(--spacing-lg); position: relative; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div class="dining-carousel" id="diningCarousel" style="display: flex; overflow: hidden; border-radius: 12px; height: 500px; background-color: #f0f0f0; position: relative;">
+          <img class="dining-carousel__slide" src="images/Managish Dining Room 4.jpg" alt="Dining room view 1" style="width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; opacity: 1; transition: opacity 0.6s ease-in-out;">
+          <img class="dining-carousel__slide" src="images/DSC_2108.jpg" alt="Dining room view 2" style="width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; opacity: 0; transition: opacity 0.6s ease-in-out;">
         </div>
-        <div class="venue-gallery__item">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80" alt="Dining room seating">
-        </div>
-        <div class="venue-gallery__item">
-          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=80" alt="Dining room atmosphere">
+        
+        <!-- Carousel Navigation -->
+        <div style="display: flex; gap: 8px; justify-content: center; margin-top: 20px;">
+          <button class="carousel-nav-btn" id="diningPrev" aria-label="Previous photo" style="background-color: #C56A3D; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center;">←</button>
+          <button class="carousel-nav-btn" id="diningNext" aria-label="Next photo" style="background-color: #C56A3D; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center;">→</button>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    // Dining Room Carousel
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousel = document.getElementById('diningCarousel');
+      const slides = carousel.querySelectorAll('.dining-carousel__slide');
+      const prevBtn = document.getElementById('diningPrev');
+      const nextBtn = document.getElementById('diningNext');
+      let currentSlide = 0;
+
+      function showSlide(n) {
+        slides.forEach(slide => slide.style.opacity = '0');
+        slides[n].style.opacity = '1';
+      }
+
+      function nextSlideFunc() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      function prevSlideFunc() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      prevBtn.addEventListener('click', prevSlideFunc);
+      nextBtn.addEventListener('click', nextSlideFunc);
+    });
+  </script>
 
   <!-- Coffee Shop Gallery -->
   <section class="section" style="background-color: #fafaf8;">
