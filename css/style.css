@@ -1,33 +1,42 @@
 /* ============================================
    CSS Variables & Root Styles
    ============================================ */
+
+/* @font-face for Rosehot Serif */
+@font-face {
+  font-family: 'Rosehot Serif';
+  src: url('../fonts/Rosehot.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   /* Colors */
-  --color-primary: #1a1a1a;
-  --color-secondary: #2d2d2d;
+  --color-primary: #6B5344;
+  --color-secondary: #8B6F47;
   --color-accent: #C56A3D;
   --color-accent-light: #C56A3D;
-  --color-cream: #F9F7F4;
-  --color-white: #F9F7F4;
+  --color-cream: #FAFAF8;
+  --color-white: #FAFAF8;
 
   /* 3 Text Colors Only */
-  --color-text: #333333;          /* Dark text for better contrast on off-white */
+  --color-text: #6B5344;          /* Warm dark brown text for maximum contrast on light background */
   --color-text-light: #C56A3D;    /* Orange - secondary text, highlights */
-  --color-text-cream: #F9F7F4;    /* Off-white - light text on dark backgrounds */
-  --color-overlay: rgba(51, 51, 51, 0.4);
+  --color-text-cream: #FAFAF8;    /* Off-white - light text on dark backgrounds */
+  --color-overlay: rgba(107, 83, 68, 0.4);
 
   /* All other colors mapped to the 3 main colors */
   --color-fayrooz-teal: #C56A3D;
   --color-managish-amber: #C56A3D;
-  --color-tahini-cream: #F9F7F4;
-  --color-olive-wood: #333333;
-  --color-levant-brick: #333333;
+  --color-tahini-cream: #FAFAF8;
+  --color-olive-wood: #6B5344;
+  --color-levant-brick: #6B5344;
   --color-olive-leaf: #C56A3D;
   --color-fresh-herb: #C56A3D;
-  --color-pomegranate: #333333;
+  --color-pomegranate: #6B5344;
 
   /* Typography */
-  --font-heading: 'Playfair Display', serif;
+  --font-heading: 'Rosehot Serif', serif;
   --font-body: 'Montserrat', sans-serif;
 
   /* Spacing */
@@ -74,8 +83,32 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-text);
-  background-color: #F9F7F4;
+  background-color: #FAFAF8;
   overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAF8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C56A3D;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A85630;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #C56A3D #FAFAF8;
+  scrollbar-width: thin;
 }
 
 img {
