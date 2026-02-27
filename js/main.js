@@ -283,7 +283,15 @@ function initVenueForm() {
   const successModal = document.getElementById('successModal');
   const closeModalBtn = document.getElementById('closeModal');
 
-  if (!venueForm || !successModal) return;
+  if (!venueForm) return;
+  if (!successModal) {
+    console.warn('Success modal not found');
+    return;
+  }
+
+  // Ensure modal is initially hidden
+  successModal.classList.remove('modal--active');
+  document.body.style.overflow = '';
 
   // Handle form submission
   venueForm.addEventListener('submit', async (e) => {
@@ -354,7 +362,15 @@ function initContactForm() {
   const successModal = document.getElementById('contactSuccessModal');
   const closeModalBtn = document.getElementById('closeContactModal');
 
-  if (!contactForm || !successModal) return;
+  if (!contactForm) return;
+  if (!successModal) {
+    console.warn('Contact success modal not found');
+    return;
+  }
+
+  // Ensure modal is initially hidden
+  successModal.classList.remove('modal--active');
+  document.body.style.overflow = '';
 
   // Handle form submission
   contactForm.addEventListener('submit', async (e) => {
