@@ -142,6 +142,30 @@ function initSmoothScroll() {
 }
 
 /**
+ * Returns the appropriate BEM error class for a form field element.
+ */
+function getFieldErrorClass(field) {
+  const tag = field.tagName.toLowerCase();
+  if (tag === 'textarea') return 'form__textarea--error';
+  if (tag === 'select') return 'form__select--error';
+  return 'form__input--error';
+}
+
+/**
+ * Validates a phone number field and sets an error message if invalid.
+ * Returns false if the value is present but invalid.
+ */
+function validatePhoneField(field, errorEl) {
+  const phonePattern = /^[\d\s\-\+\(\)]{10,}$/;
+  if (field.value.trim() && !phonePattern.test(field.value)) {
+    field.classList.add('form__input--error');
+    if (errorEl) errorEl.textContent = 'Please enter a valid phone number (at least 10 digits).';
+    return false;
+  }
+  return true;
+}
+
+/**
  * Form Validation Helper
  * Basic client-side validation for forms
  */
@@ -149,12 +173,20 @@ function validateForm(form) {
   const requiredFields = form.querySelectorAll('[required]');
   let isValid = true;
 
+  // Clear all previous error states
+  form.querySelectorAll('.form__input--error, .form__textarea--error, .form__select--error').forEach(el => {
+    el.classList.remove('form__input--error', 'form__textarea--error', 'form__select--error');
+  });
+  form.querySelectorAll('.form__error-message').forEach(el => {
+    el.textContent = '';
+  });
+
   requiredFields.forEach(field => {
-    // Remove previous error states
-    field.classList.remove('form__input--error');
+    const errorEl = field.id ? form.querySelector(`#${field.id}-error`) : null;
 
     if (!field.value.trim()) {
-      field.classList.add('form__input--error');
+      field.classList.add(getFieldErrorClass(field));
+      if (errorEl) errorEl.textContent = 'This field is required.';
       isValid = false;
     }
 
@@ -163,19 +195,24 @@ function validateForm(form) {
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(field.value)) {
         field.classList.add('form__input--error');
+        if (errorEl) errorEl.textContent = 'Please enter a valid email address.';
         isValid = false;
       }
     }
 
-    // Phone validation
-    if (field.type === 'tel' && field.value.trim()) {
-      const phonePattern = /^[\d\s\-\+\(\)]{10,}$/;
-      if (!phonePattern.test(field.value)) {
-        field.classList.add('form__input--error');
-        isValid = false;
-      }
+    // Phone validation (required tel fields)
+    if (field.type === 'tel') {
+      const errorEl2 = field.id ? form.querySelector(`#${field.id}-error`) : null;
+      if (!validatePhoneField(field, errorEl2)) isValid = false;
     }
   });
+
+  // Validate optional phone field if filled
+  const phoneField = form.querySelector('input[type="tel"]:not([required])');
+  if (phoneField) {
+    const phoneErrorEl = phoneField.id ? form.querySelector(`#${phoneField.id}-error`) : null;
+    if (!validatePhoneField(phoneField, phoneErrorEl)) isValid = false;
+  }
 
   return isValid;
 }
