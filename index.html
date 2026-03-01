@@ -20,7 +20,7 @@
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="logo">
-          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" class="logo__image" style="height: 100px; width: auto;">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" class="logo__image" style="height: 100px; width: auto;" loading="lazy">
         </a>
 
         <!-- Desktop Navigation -->
@@ -53,17 +53,14 @@
     <a href="contact.html" class="nav-mobile__link">Contact</a>
   </nav>
 
-  <!-- Hero Section with Slideshow -->
-  <section class="hero" id="hero">
-    <div class="hero__slideshow" id="heroSlideshow" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden;">
-      <img class="hero__slide" src="images/Managish Dining Room 4.jpg" alt="Dining Room" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.8s ease-in-out;">
-      <img class="hero__slide" src="images/Our Coffee Shop_Managish Coffee & Sweets Corner_DSC_2548.jpg" alt="Coffee Shop" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out;">
-    </div>
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
+  <!-- Hero Section with single background image -->
+  <section class="hero" id="hero" style="background-color: var(--color-tahini-cream); position: relative;">
+    <div class="hero__background" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-image: url('images/DSC_2108.webp'); background-size: cover; background-position: center; z-index: 0;"></div>
+    <div class="hero__overlay" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(20,12,8,0.45); z-index: 1;"></div>
+    <div class="hero__content" style="position: relative; z-index: 2; color: #ffffff;">
       <p class="hero__subtitle" style="margin-top: 3rem;">Welcome to</p>
       <h1 class="hero__title" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-        <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" style="height: 280px; width: auto; filter: drop-shadow(0 4px 24px rgba(0,0,0,0.5));">
+        <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" style="height: 280px; width: auto; filter: drop-shadow(0 4px 24px rgba(0,0,0,0.5));" loading="lazy">
       </h1>
       <p class="hero__tagline">Turkish and Lebanese traditions, hand-crafted for today's table</p>
       <div class="hero__buttons" style="margin-top: 1rem;">
@@ -71,37 +68,6 @@
       </div>
     </div>
   </section>
-
-  <script>
-    // Hero slideshow functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const slides = document.querySelectorAll('.hero__slide');
-      let currentSlide = 0;
-      
-      // Preload images
-      const images = [];
-      slides.forEach(slide => {
-        const img = new Image();
-        img.src = slide.src;
-        images.push(img);
-      });
-      
-      function showSlide(n) {
-        slides.forEach(slide => slide.style.opacity = '0');
-        slides[n].style.opacity = '1';
-      }
-      
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
-      
-      // Wait 1 second to ensure images are loaded, then start slideshow
-      setTimeout(() => {
-        setInterval(nextSlide, 5000);
-      }, 1000);
-    });
-  </script>
 
   <!-- Venue Showcase Section -->
   <section class="section" id="venue-preview">
@@ -116,7 +82,7 @@
         <!-- Dining Room -->
         <div class="venue-split__panel">
           <div class="venue-split__image-wrap">
-            <img src="images/Managish Dining Room 4.jpg" alt="Managish Dining Room">
+            <img src="images/Managish Dining Room 4.webp" alt="Managish Dining Room" loading="lazy">
           </div>
           <div class="venue-split__label">
             <h3 class="venue-split__name">Our dining room</h3>
@@ -130,7 +96,7 @@
         <!-- Coffee Shop -->
         <div class="venue-split__panel">
           <div class="venue-split__image-wrap">
-            <img src="images/Our Coffee Shop_Managish Coffee & Sweets Corner_DSC_2548.jpg" alt="Managish Coffee Shop">
+            <img src="images/Our Coffee Shop_Managish Coffee & Sweets Corner_DSC_2548.webp" alt="Managish Coffee Shop" loading="lazy">
           </div>
           <div class="venue-split__label">
             <h3 class="venue-split__name">Our coffee shop</h3>
@@ -159,35 +125,35 @@
       <div class="carousel-wrapper">
         <div class="carousel" id="menuCarousel">
           <div class="carousel__item fade-in">
-            <img src="images/1-breakfast-tray.jpg" alt="Breakfast Tray">
+            <img src="images/1-breakfast-tray.webp" alt="Breakfast Tray" loading="lazy">
             <p class="carousel__label">Breakfast Tray</p>
           </div>
           <div class="carousel__item fade-in">
-            <img src="images/2-manoushi.jpg" alt="Manoushi">
+            <img src="images/2-manoushi.webp" alt="Manoushi" loading="lazy">
             <p class="carousel__label">Manoushi</p>
           </div>
           <div class="carousel__item fade-in">
-            <img src="images/3-fawal.jpg" alt="Fawal">
+            <img src="images/3-fawal.webp" alt="Fawal" loading="lazy">
             <p class="carousel__label">Fawal</p>
           </div>
           <div class="carousel__item fade-in">
-            <img src="images/4-appetizers.jpg" alt="Appetizers">
+            <img src="images/4-appetizers.webp" alt="Appetizers" loading="lazy">
             <p class="carousel__label">Appetizers</p>
           </div>
           <div class="carousel__item fade-in">
-            <img src="images/5-sandwiches.jpg" alt="Sandwiches">
+            <img src="images/5-sandwiches.webp" alt="Sandwiches" loading="lazy">
             <p class="carousel__label">Sandwiches</p>
           </div>
           <div class="carousel__item fade-in">
-            <img src="images/6-pide.jpg" alt="Pide">
+            <img src="images/6-pide.webp" alt="Pide" loading="lazy">
             <p class="carousel__label">Pide</p>
           </div>
           <div class="carousel__item fade-in">
-            <img src="images/7-burgers.jpg" alt="Burgers">
+            <img src="images/7-burgers.webp" alt="Burgers" loading="lazy">
             <p class="carousel__label">Burgers</p>
           </div>
           <div class="carousel__item fade-in">
-            <img src="images/8-grills.jpg" alt="Grills">
+            <img src="images/8-grills.webp" alt="Grills" loading="lazy">
             <p class="carousel__label">Grills</p>
           </div>
         </div>
@@ -261,7 +227,7 @@
       <div class="footer__grid">
         <!-- About Column -->
         <div class="footer__column">
-          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="MANAGISH مناقيش" class="footer__logo">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="MANAGISH مناقيش" class="footer__logo" loading="lazy">
           <p>
             Authentic Turkish and Lebanese cuisine. Celebrating tradition through modern expression.
           </p>

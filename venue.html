@@ -20,7 +20,7 @@
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="logo">
-          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" class="logo__image" style="height: 100px; width: auto;">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" class="logo__image" style="height: 100px; width: auto;" loading="lazy">
         </a>
 
         <!-- Desktop Navigation -->
@@ -56,17 +56,18 @@
   <!-- Hero Section with Slideshow -->
   <section class="hero hero--page">
     <div class="hero__slideshow" id="heroSlideshow" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden;">
-      <img class="hero__slide" src="images/Managish Dining Room 4.jpg" alt="Dining Room" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.8s ease-in-out;">
-      <img class="hero__slide" src="images/Our Coffee Shop_Managish Coffee & Sweets Corner_DSC_2548.jpg" alt="Coffee Shop" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out;">
+      <img class="hero__slide" src="images/Managish Dining Room 4.webp" alt="Dining Room" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.8s ease-in-out;" loading="lazy">
+      <img class="hero__slide" src="images/Our Coffee Shop_Managish Coffee & Sweets Corner_DSC_2548.webp" alt="Coffee Shop" style="position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center 75%; opacity: 0; transition: opacity 0.8s ease-in-out;" loading="lazy">
     </div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <p class="hero__subtitle">Our Space</p>
       <h1 class="hero__title" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-        <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" style="height: 200px; width: auto;">
+        <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" style="height: 200px; width: auto;" loading="lazy">
       </h1>
     </div>
   </section>
+
 
   <script>
     // Hero slideshow functionality
@@ -94,13 +95,13 @@
       
       // Wait 1 second to ensure images are loaded, then start slideshow
       setTimeout(() => {
-        setInterval(nextSlide, 5000);
+        setInterval(nextSlide, 3000);
       }, 1000);
     });
   </script>
 
   <!-- Venue Introduction - MOVED BEFORE INQUIRY FORM -->
-  <section class="section" style="background-color: #fafaf8;">
+  <section class="section" style="background-color: var(--color-tahini-cream); padding-top: var(--spacing-lg); padding-bottom: 0;">
     <div class="container text-center">
       <div class="section-header fade-in">
         <p class="section-header__subtitle">Two Moods, One Welcome</p>
@@ -114,7 +115,7 @@
   </section>
 
   <!-- Venue Inquiry Form -->
-  <section class="section section--tahini" id="inquiry" style="background-color: #fafaf8;">
+  <section class="section section--tahini" id="inquiry" style="background-color: var(--color-tahini-cream); padding-top: var(--spacing-md);">
     <div class="container">
       <div class="section-header fade-in">
         <p class="section-header__subtitle">LET’S PLAN YOUR EVENT</p>
@@ -242,7 +243,7 @@
   </div>
 
   <!-- Dining Room Gallery Carousel -->
-  <section class="section" style="background-color: #fafaf8;">
+  <section class="section" style="background-color: var(--color-tahini-cream);">
     <div class="container">
       <div class="section-header fade-in">
         <p class="section-header__subtitle">Vibrant & Rustic</p>
@@ -255,16 +256,17 @@
       </p>
 
       <!-- Carousel Container -->
-      <div class="dining-carousel-wrapper fade-in" style="margin-top: var(--spacing-lg); position: relative; max-width: 900px; margin-left: auto; margin-right: auto;">
-        <div class="dining-carousel" id="diningCarousel" style="display: flex; overflow: hidden; border-radius: 12px; height: 500px; background-color: #f0f0f0; position: relative;">
-          <img class="dining-carousel__slide" src="images/Managish Dining Room 4.jpg" alt="Dining room view 1" style="width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; opacity: 1; transition: opacity 0.6s ease-in-out;">
-          <img class="dining-carousel__slide" src="images/DSC_2108.jpg" alt="Dining room view 2" style="width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; opacity: 0; transition: opacity 0.6s ease-in-out;">
-        </div>
-        
-        <!-- Carousel Navigation -->
-        <div style="display: flex; gap: 8px; justify-content: center; margin-top: 20px;">
-          <button class="carousel-nav-btn" id="diningPrev" aria-label="Previous photo" style="background-color: #C56A3D; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center;">←</button>
-          <button class="carousel-nav-btn" id="diningNext" aria-label="Next photo" style="background-color: #C56A3D; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center;">→</button>
+      <div class="dining-carousel-wrapper fade-in" style="margin-top: var(--spacing-lg); position: relative; width: 100%; max-width: 100%; margin-left: auto; margin-right: auto;">
+        <div class="dining-carousel" id="diningCarousel" style="position: relative; height: 500px; background-color: #f0f0f0; overflow: hidden; width: 100%; border-radius: 8px;">
+          <img class="dining-carousel__slide" src="images/Managish Dining Room 2.webp" alt="Dining room view 1" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 1; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/Managish Dining Room 3.webp" alt="Dining room view 2" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/Managish Dining Room 4.webp" alt="Dining room view 3" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/Managish Dining Room 5.webp" alt="Dining room view 4" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/DSC_2108.webp" alt="Dining room view 5" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          
+          <!-- Navigation Arrows Overlay -->
+          <button class="carousel-nav-btn" id="diningPrev" aria-label="Previous photo" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background-color: rgba(197, 106, 61, 0.85); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">←</button>
+          <button class="carousel-nav-btn" id="diningNext" aria-label="Next photo" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background-color: rgba(197, 106, 61, 0.85); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">→</button>
         </div>
       </div>
     </div>
@@ -299,8 +301,8 @@
     });
   </script>
 
-  <!-- Coffee Shop Gallery -->
-  <section class="section" style="background-color: #fafaf8;">
+  <!-- Coffee Shop Carousel -->
+  <section class="section" style="background-color: var(--color-tahini-cream);">
     <div class="container">
       <div class="section-header fade-in">
         <p class="section-header__subtitle">Serene & Refined</p>
@@ -311,26 +313,126 @@
       <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-lg); color: #6B5344; font-size: 1.05rem; line-height: 1.8; text-align: center;">
         Crossing over into our coffee shop, the mood turns serene and the hours follow a gentler rhythm. Anchored by an elegant coffee bar, the space is soulful and softly nostalgic, designed for conversation and the rituals of coffee and sweets. Arabic pastries, specialty coffee, and classic cakes are served throughout the day, creating a setting that invites guests to sit closer and enjoy the simple pleasure of enjoying the present moment together.
       </p>
+    </div>
 
-      <div class="venue-gallery fade-in">
-        <div class="venue-gallery__item venue-gallery__item--featured">
-          <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=800&q=80" alt="Coffee shop bar area">
-        </div>
-        <div class="venue-gallery__item">
-          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=400&q=80" alt="Coffee shop seating">
-        </div>
-        <div class="venue-gallery__item">
-          <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&q=80" alt="Coffee shop ambiance">
+    <!-- Carousel Container -->
+    <div class="container">
+      <div class="dining-carousel-wrapper fade-in" style="margin-top: var(--spacing-lg); position: relative; width: 100%; max-width: 100%; margin-left: auto; margin-right: auto;">
+        <div class="dining-carousel" id="coffeeCarousel" style="position: relative; height: 500px; background-color: #f0f0f0; overflow: hidden; width: 100%; border-radius: 8px;">
+          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_DSC_2548.webp" alt="Coffee shop view 1" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 1; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_DSC_0157 copy.webp" alt="Coffee shop view 2" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_DSC_0180 copy.webp" alt="Coffee shop view 3" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_DSC_0195 copy.webp" alt="Coffee shop view 4" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_DSC_0441 copy.webp" alt="Coffee shop view 5" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_DSC_0506 copy.webp" alt="Coffee shop view 6" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_Desserts_San Sebastian Cheesecake_DSC_0526 copy.webp" alt="Coffee shop view 7" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_MTZ_0871 copy.webp" alt="Coffee shop view 8" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_MTZ_0891 copy.webp" alt="Coffee shop view 9" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+
+          <!-- Navigation Arrows Overlay (match dining style) -->
+          <button class="carousel-nav-btn" id="coffeePrev" aria-label="Previous photo" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background-color: rgba(197, 106, 61, 0.85); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">←</button>
+          <button class="carousel-nav-btn" id="coffeeNext" aria-label="Next photo" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background-color: rgba(197, 106, 61, 0.85); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">→</button>
         </div>
       </div>
+    </div>
+
+    <script>
+      // Coffee Shop Carousel
+      document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.getElementById('coffeeCarousel');
+        if (!carousel) return;
+        const slides = carousel.querySelectorAll('.dining-carousel__slide');
+        const prevBtn = document.getElementById('coffeePrev');
+        const nextBtn = document.getElementById('coffeeNext');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+          slides.forEach(slide => slide.style.opacity = '0');
+          slides[n].style.opacity = '1';
+        }
+
+        function nextSlideFunc() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }
+
+        function prevSlideFunc() {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(currentSlide);
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', prevSlideFunc);
+        if (nextBtn) nextBtn.addEventListener('click', nextSlideFunc);
+      });
+    </script>
+  </section>
+  
+  <!-- Our Street-side Seating (moved here) -->
+  <section class="section" style="background-color: var(--color-tahini-cream);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Effortless & Breezy</p>
+        <h2 class="section-header__title" style="font-family: 'Rosehot Serif', serif; color: #6B5344;">Our Street-side Seating</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-lg); color: #6B5344; font-size: 1.05rem; line-height: 1.8; text-align: center;">
+        <!-- descriptor text to follow from client -->
+        <em>Placeholder description — descriptor text to follow from client.</em>
+      </p>
+
+      <!-- Carousel Container -->
+      <div class="dining-carousel-wrapper fade-in" style="margin-top: var(--spacing-lg); position: relative; width: 100%; max-width: 100%; margin-left: auto; margin-right: auto;">
+        <div class="dining-carousel" id="streetCarousel" style="position: relative; height: 500px; background-color: #f0f0f0; overflow: hidden; width: 100%; border-radius: 8px;">
+          <img class="dining-carousel__slide" src="images/DSC_6069.webp" alt="Street seating view 1" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 1; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/DSC_6070.webp" alt="Street seating view 2" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/DSC_6115.webp" alt="Street seating view 3" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/DSC_6120.webp" alt="Street seating view 4" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+          <img class="dining-carousel__slide" src="images/DSC_6123.webp" alt="Street seating view 5" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
+
+          <!-- Navigation Arrows Overlay -->
+          <button class="carousel-nav-btn" id="streetPrev" aria-label="Previous photo" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background-color: rgba(197, 106, 61, 0.85); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">←</button>
+          <button class="carousel-nav-btn" id="streetNext" aria-label="Next photo" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background-color: rgba(197, 106, 61, 0.85); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">→</button>
+        </div>
+      </div>
+
+      <script>
+        // Street-side Seating Carousel
+        document.addEventListener('DOMContentLoaded', function() {
+          const carousel = document.getElementById('streetCarousel');
+          if (!carousel) return;
+          const slides = carousel.querySelectorAll('.dining-carousel__slide');
+          const prevBtn = document.getElementById('streetPrev');
+          const nextBtn = document.getElementById('streetNext');
+          let currentSlide = 0;
+
+          function showSlide(n) {
+            slides.forEach(slide => slide.style.opacity = '0');
+            slides[n].style.opacity = '1';
+          }
+
+          function nextSlideFunc() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+          }
+
+          function prevSlideFunc() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+          }
+
+          if (prevBtn) prevBtn.addEventListener('click', prevSlideFunc);
+          if (nextBtn) nextBtn.addEventListener('click', nextSlideFunc);
+        });
+      </script>
     </div>
   </section>
 
   <!-- Venue Features -->
-  <section class="section" style="background-color: #fafaf8;">
+  <section class="section" style="background-color: var(--color-tahini-cream);">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-header__subtitle">What We Offer</p>
+        <p class="section-header__subtitle">OUR UNIQUE ADVANTAGE</p>
         <h2 class="section-header__title" style="font-family: 'Rosehot Serif', serif; color: #6B5344;">Venue Features</h2>
         <div class="section-header__divider"></div>
       </div>
@@ -339,19 +441,20 @@
         <div class="venue-feature fade-in">
           <div class="venue-feature__icon">📍</div>
           <h3 class="venue-feature__title">Prime Location</h3>
-          <p class="venue-feature__text">Centrally located with easy access to public transportation</p>
+          <p class="venue-feature__text">Centrally located with easy access to public transportation Along popular East Boulevard |
+Directly across spacious parking lot</p>
         </div>
 
         <div class="venue-feature fade-in">
-          <div class="venue-feature__icon">🎨</div>
-          <h3 class="venue-feature__title">Aesthetic Interiors</h3>
-          <p class="venue-feature__text">Beautifully designed space with elegant décor and ambient lighting</p>
+          <div class="venue-feature__icon">🖼️</div>
+          <h3 class="venue-feature__title">Intentional Interiors</h3>
+          <p class="venue-feature__text">Designed with beauty and comfort in mind, balancing aesthetics and ease</p>
         </div>
 
         <div class="venue-feature fade-in">
           <div class="venue-feature__icon">☀️</div>
           <h3 class="venue-feature__title">Terrace Seating</h3>
-          <p class="venue-feature__text">Enjoy al fresco dining on our stunning outdoor terrace</p>
+          <p class="venue-feature__text">Go al fresco, day & night with bistro tables for two to spacious settings for groups</p>
         </div>
 
         <div class="venue-feature fade-in">
@@ -375,7 +478,7 @@
       <div class="footer__grid">
         <!-- About Column -->
         <div class="footer__column">
-          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="MANAGISH مناقيش" class="footer__logo">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="MANAGISH مناقيش" class="footer__logo" loading="lazy">
           <p>
             Authentic Turkish and Lebanese cuisine. Celebrating tradition through modern expression.
           </p>

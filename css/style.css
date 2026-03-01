@@ -16,19 +16,19 @@
   --color-secondary: #8B6F47;
   --color-accent: #C56A3D;
   --color-accent-light: #C56A3D;
-  --color-cream: #FAFAF8;
-  --color-white: #FAFAF8;
+  --color-cream: #F9F7F4;
+  --color-white: #F9F7F4;
 
   /* 3 Text Colors Only */
-  --color-text: #6B5344;          /* Warm dark brown text for maximum contrast on light background */
+  --color-text: #3D2B1F;          /* Deep warm brown — strong contrast on #F9F7F4, softer than pure black */
   --color-text-light: #C56A3D;    /* Orange - secondary text, highlights */
-  --color-text-cream: #FAFAF8;    /* Off-white - light text on dark backgrounds */
-  --color-overlay: rgba(107, 83, 68, 0.4);
+  --color-text-cream: #F9F7F4;    /* Off-white - light text on dark backgrounds */
+  --color-overlay: rgba(26, 16, 8, 0.4);
 
   /* All other colors mapped to the 3 main colors */
   --color-fayrooz-teal: #C56A3D;
   --color-managish-amber: #C56A3D;
-  --color-tahini-cream: #FAFAF8;
+  --color-tahini-cream: #F9F7F4;
   --color-olive-wood: #6B5344;
   --color-levant-brick: #6B5344;
   --color-olive-leaf: #C56A3D;
@@ -83,7 +83,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-text);
-  background-color: #FAFAF8;
+  background-color: var(--color-tahini-cream); /* #F9F7F4 neutral off-white */
   overflow-x: hidden;
 }
 
@@ -93,7 +93,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FAFAF8;
+  background: var(--color-tahini-cream);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -107,7 +107,7 @@ body {
 
 /* Firefox scrollbar */
 * {
-  scrollbar-color: #C56A3D #FAFAF8;
+  scrollbar-color: #C56A3D var(--color-tahini-cream);
   scrollbar-width: thin;
 }
 
@@ -137,7 +137,7 @@ h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
-  color: var(--color-olive-wood);
+  color: var(--color-text);
 }
 
 h1 {
@@ -289,13 +289,20 @@ p {
 }
 
 .nav__link {
-  color: var(--color-tahini-cream);
+  color: var(--color-tahini-cream);  /* White/cream — readable over hero photo on transparent header */
   font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   position: relative;
   padding: 0.5rem 0;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4); /* subtle shadow for legibility over any background */
+}
+
+/* When header is scrolled and background becomes dark, keep links light */
+.header--scrolled .nav__link {
+  color: var(--color-tahini-cream);
+  text-shadow: none;
 }
 
 .nav__link:hover {
@@ -314,7 +321,7 @@ p {
 }
 
 .nav__link--active {
-  color: var(--color-managish-amber);
+  color: var(--color-accent); /* amber/gold — visible over both transparent and dark header */
 }
 
 .nav__link:hover::after,
@@ -337,7 +344,7 @@ p {
 .nav-toggle__bar {
   width: 25px;
   height: 3px;
-  background-color: var(--color-tahini-cream);
+  background-color: var(--color-tahini-cream); /* White/cream — visible over hero photo */
   transition: all var(--transition-normal);
 }
 
@@ -488,7 +495,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../images/DSC_2108.jpg');
+  background-image: url('../images/DSC_2108.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -500,7 +507,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(154, 106, 67, 0.55), rgba(197, 106, 61, 0.65));
+  background: rgba(20, 12, 8, 0.45); /* dark neutral — matches home page hero overlay */
 }
 
 .hero__content {
@@ -577,8 +584,8 @@ p {
 
 /* Page Hero (for inner pages) */
 .hero--page {
-  height: 50vh;
-  min-height: 400px;
+  height: 75vh;
+  min-height: 520px;
 }
 
 /* ============================================
