@@ -13,6 +13,15 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css?v=4">
+  
+  <!-- Page-specific styles -->
+  <style>
+    h1, h2, h3, h4, h5, h6,
+    .section-header__title,
+    .hero__title {
+      font-family: 'Rosehot Serif', serif !important;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -55,10 +64,10 @@
 
   <!-- Hero Section -->
   <section class="hero hero--page">
-    <div class="hero__background" style="background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?w=1920&q=80');"></div>
+    <div class="hero__background" style="background-image: url('images/DSC_1702.webp');"></div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <p class="hero__subtitle">Exceptional Events</p>
+      <p class="hero__subtitle">Serving Excellence</p>
       <h1 class="hero__title" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
         <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" style="height: 200px; width: auto;" loading="lazy">
       </h1>
@@ -69,22 +78,27 @@
   <section class="section">
     <div class="container text-center">
       <div class="section-header fade-in">
-        <p class="section-header__subtitle">Culinary Excellence, Delivered</p>
-        <h2 class="section-header__title">Unforgettable Catering</h2>
+        <p class="section-header__subtitle">OUR CATERING SERVICE</p>
+        <h2 class="section-header__title">Expertly Crafted Experiences</h2>
         <div class="section-header__divider"></div>
       </div>
       <p class="fade-in" style="max-width: 700px; margin: 0 auto; color: var(--color-text-light);">
-        Bring the MANAGISH experience to your next event. Our catering team crafts bespoke menus
-        for every occasion, from intimate gatherings to grand celebrations.
+        Entrust your event to our catering team. From menu planning to the full dining set-up and through to coffee and dessert service, we take care of the details so your guests enjoy the moment as you host with ease.
       </p>
     </div>
   </section>
 
-
-
-
-
-
+  <!-- Menu CTA Section -->
+  <section class="section section--dark" style="padding: var(--spacing-md) 0;">
+    <div class="container">
+      <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+        <p style="color: rgba(255,255,255,0.95); font-size: 1.1rem; line-height: 1.8; margin-bottom: var(--spacing-md);">
+          Explore our full menu of Lebanese and Turkish specialties to plan your perfect catering selection.
+        </p>
+        <a href="menu.html" class="btn btn--primary">View Our Menu</a>
+      </div>
+    </div>
+  </section>
 
   <!-- Catering Inquiry Form -->
   <section class="section section--cream" id="inquiry">
@@ -188,15 +202,14 @@
         <div class="footer__column">
           <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="MANAGISH مناقيش" class="footer__logo" loading="lazy">
           <p>
-            Authentic Lebanese cuisine where traditional recipes meet modern presentation.
-            Experience the taste of Lebanon at MANAGISH.
+            Authentic Turkish and Lebanese cuisine. Celebrating tradition through modern expression.
           </p>
           <div class="footer__social">
-            <a href="#" aria-label="Instagram" style="color: #E8D4B8;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
-                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
-                <circle cx="18" cy="6" r="1"/>
+            <a href="#" aria-label="Instagram" class="footer__social-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <circle cx="17.5" cy="6.5" r="1.5"/>
               </svg>
             </a>
           </div>
@@ -217,22 +230,23 @@
         <div class="footer__column">
           <h4>Opening Hours</h4>
           <ul>
-            <li>Monday - Friday</li>
-            <li>11:30 AM - 10:00 PM</li>
+            <li><strong>Ramadan Hours:</strong></li>
+            <li>Delivery &amp; Takeaway: 4pm - 2:45am</li>
+            <li>Dine-in: After Maghrib - 3am</li>
             <li>&nbsp;</li>
-            <li>Saturday - Sunday</li>
-            <li>10:00 AM - 11:00 PM</li>
+            <li><strong>Regular Hours:</strong></li>
+            <li>7am - 1am daily</li>
           </ul>
         </div>
 
         <!-- Contact & Map Column -->
         <div class="footer__column">
-          <h4>Find Us</h4>
+          <h4>Get in Touch</h4>
           <p>
-            Nest 5 Aljada<br>
-            Dubai, UAE<br>
-            <a href="tel:+971xxxx">Phone: Contact Us</a><br>
-            <a href="mailto:hello@managish.com">hello@managish.com</a>
+            Nest 5, Aljada<br>
+            Sharjah, UAE<br>
+            <a href="tel:+971065699255">+971 (06) 569 9255</a><br>
+            <a href="mailto:info@managish.com">info@managish.com</a>
           </p>
           <div class="footer__map">
             <iframe

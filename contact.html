@@ -55,7 +55,10 @@
 
   <!-- Hero Section -->
   <section class="hero hero--page">
-    <div class="hero__background" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=80');"></div>
+    <div class="hero__slideshow" id="heroSlideshow" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden;">
+      <img class="hero__slide" src="images/Managish Dining Room 4.webp" alt="Dining Room" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.8s ease-in-out;" loading="lazy">
+      <img class="hero__slide" src="images/Our Coffee Shop_Managish Coffee & Sweets Corner_DSC_2548.webp" alt="Coffee Shop" style="position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center 75%; opacity: 0; transition: opacity 0.8s ease-in-out;" loading="lazy">
+    </div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <p class="hero__subtitle">Get In Touch</p>
@@ -64,6 +67,19 @@
       </h1>
     </div>
   </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('#heroSlideshow .hero__slide');
+      let current = 0;
+      function nextSlide() {
+        slides[current].style.opacity = '0';
+        current = (current + 1) % slides.length;
+        slides[current].style.opacity = '1';
+      }
+      setTimeout(() => { setInterval(nextSlide, 3000); }, 1000);
+    });
+  </script>
 
   <!-- Contact Section -->
   <section class="section">
@@ -100,8 +116,12 @@
             <div class="contact-item__content">
               <h4>Opening Hours</h4>
               <p>
-                <strong>Mon - Fri:</strong> 11:30 AM - 10:00 PM<br>
-                <strong>Sat - Sun:</strong> 10:00 AM - 11:00 PM
+                <strong>Ramadan Hours:</strong><br>
+                Delivery &amp; Takeaway: 4pm – 2:45am<br>
+                Dine-in: After Maghrib – 3am<br>
+                <br>
+                <strong>Regular Hours:</strong><br>
+                7am – 1am daily
               </p>
             </div>
           </div>
@@ -124,6 +144,11 @@
                 <label class="form__label" for="contact-email">Email Address *</label>
                 <input type="email" id="contact-email" name="email" class="form__input" required>
               </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="contact-phone">Mobile Phone *</label>
+              <input type="tel" id="contact-phone" name="phone" class="form__input" placeholder="+971 XX XXX XXXX" required>
             </div>
 
             <div class="form__group">
