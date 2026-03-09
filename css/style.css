@@ -542,12 +542,13 @@ p {
 }
 
 .hero__subtitle {
+  font-family: 'Rosehot Serif', serif;
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 10px;
   color: #E8D4B8;
   margin-bottom: var(--spacing-sm);
-  font-weight: 700;
+  font-weight: 400;
   text-shadow: 0 4px 12px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.6);
 }
 
@@ -581,12 +582,13 @@ p {
 }
 
 .hero__tagline {
+  font-family: 'Rosehot Serif', serif;
   font-size: 1.6rem;
-  font-style: italic;
+  font-style: normal;
   margin-bottom: var(--spacing-md);
   color: #E8D4B8;
   opacity: 1;
-  font-weight: 700;
+  font-weight: 400;
   text-shadow: 0 4px 16px rgba(0,0,0,0.8), 0 2px 6px rgba(0,0,0,0.6);
   letter-spacing: 0.5px;
 }
@@ -621,9 +623,10 @@ p {
 }
 
 .section-header__subtitle {
+  font-family: 'Rosehot Serif', serif;
   color: var(--color-managish-amber);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: var(--spacing-xs);
