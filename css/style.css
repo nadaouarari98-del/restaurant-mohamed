@@ -8,6 +8,7 @@
   src: url('../fonts/Rosehot.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -20,9 +21,9 @@
   --color-white: #F9F7F4;
 
   /* 3 Text Colors Only */
-  --color-text: #3D2B1F;          /* Deep warm brown — strong contrast on #F9F7F4, softer than pure black */
-  --color-text-light: #C56A3D;    /* Orange - secondary text, highlights */
-  --color-text-cream: #F9F7F4;    /* Off-white - light text on dark backgrounds */
+  --color-text: #4A2F1A;          /* Warm dark brown — strong contrast on #F9F7F4, rich and warm */
+  --color-text-light: #7A5C44;    /* Medium warm brown — secondary/body text, subheadings */
+  --color-text-cream: #F9F7F4;    /* Off-white — light text on dark backgrounds */
   --color-overlay: rgba(26, 16, 8, 0.4);
 
   /* All other colors mapped to the 3 main colors */
@@ -85,6 +86,20 @@ body {
   color: var(--color-text);
   background-color: var(--color-tahini-cream); /* #F9F7F4 neutral off-white */
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Enforce Rosehot Serif on ALL headings site-wide — overrides any inherited font */
+h1, h2, h3, h4, h5, h6,
+.section-header__title,
+.hero__title,
+.venue-feature__title,
+.delivery-option__title,
+.footer__column h4,
+.modal__title {
+  font-family: 'Rosehot Serif', serif !important;
 }
 
 /* Scrollbar Styling */
@@ -135,9 +150,9 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
-  color: var(--color-text);
+  color: var(--color-primary);
 }
 
 h1 {
@@ -828,30 +843,29 @@ p {
   gap: 1.5rem;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 1rem 0;
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-primary) transparent;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  padding: 1rem 0 1.5rem;
+  /* Hide scrollbar across all browsers */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
 }
 
 .carousel::-webkit-scrollbar {
-  height: 6px;
-}
-
-.carousel::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.carousel::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
-  border-radius: 3px;
+  display: none;
 }
 
 .carousel__item {
   flex: 0 0 280px;
   min-width: 280px;
   text-align: center;
+  scroll-snap-align: start;
   cursor: grab;
   transition: transform 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .carousel__item:active {
@@ -880,7 +894,7 @@ p {
   margin-top: 1rem;
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-text);
   letter-spacing: 0.02em;
 }
 
@@ -1408,9 +1422,12 @@ p {
 
 .delivery__options {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .delivery-option {
@@ -1858,7 +1875,7 @@ p {
   }
 
   .delivery__options {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer__grid {

@@ -432,69 +432,98 @@ function initContactForm() {
   });
 }
 /**
- * Menu Carousel - Drag and Swipe Support
+ * Menu Carousel — smooth drag, swipe & momentum scrolling
  */
 function initCarousel() {
   const carousel = document.getElementById('menuCarousel');
   if (!carousel) return;
 
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-  let startTime;
+  let isDragging = false;
+  let startX = 0;
+  let startScrollLeft = 0;
+  let lastX = 0;
+  let lastTimestamp = 0;
   let velocity = 0;
+  let momentumId = null;
 
-  // Mouse events
-  carousel.addEventListener('mousedown', handleStart);
-  carousel.addEventListener('mouseleave', handleEnd);
-  carousel.addEventListener('mouseup', handleEnd);
-  carousel.addEventListener('mousemove', handleMove);
-
-  // Touch events
-  carousel.addEventListener('touchstart', handleStart, false);
-  carousel.addEventListener('touchend', handleEnd, false);
-  carousel.addEventListener('touchmove', handleMove, false);
-
-  function handleStart(e) {
-    isDown = true;
-    carousel.style.cursor = 'grabbing';
-    startX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
-    scrollLeft = carousel.scrollLeft;
-    startTime = Date.now();
+  // ── helpers ─────────────────────────────────────────────
+  function getClientX(e) {
+    return e.touches ? e.touches[0].clientX : e.clientX;
   }
 
-  function handleEnd() {
-    isDown = false;
+  function cancelMomentum() {
+    if (momentumId) { cancelAnimationFrame(momentumId); momentumId = null; }
+  }
+
+  // ── drag start ──────────────────────────────────────────
+  function onDragStart(e) {
+    // Ignore right-click
+    if (e.button && e.button !== 0) return;
+    cancelMomentum();
+    isDragging = true;
+    startX = getClientX(e);
+    startScrollLeft = carousel.scrollLeft;
+    lastX = startX;
+    lastTimestamp = Date.now();
+    velocity = 0;
+    carousel.style.cursor = 'grabbing';
+    // Prevent scroll-snap from fighting the drag
+    carousel.style.scrollSnapType = 'none';
+  }
+
+  // ── drag move ───────────────────────────────────────────
+  function onDragMove(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = getClientX(e);
+    const dx = x - startX;
+    carousel.scrollLeft = startScrollLeft - dx;
+
+    // Track velocity (px/ms) over last frame
+    const now = Date.now();
+    const dt = now - lastTimestamp || 1;
+    velocity = (lastX - x) / dt;   // positive → scrolling right
+    lastX = x;
+    lastTimestamp = now;
+  }
+
+  // ── drag end — apply momentum then re-enable snap ───────
+  function onDragEnd() {
+    if (!isDragging) return;
+    isDragging = false;
     carousel.style.cursor = 'grab';
-    
-    // Apply momentum scrolling
-    if (velocity !== 0) {
-      let currentVelocity = velocity;
-      const deceleration = 0.95;
-      
-      const momentumScroll = setInterval(() => {
-        carousel.scrollLeft += currentVelocity;
-        currentVelocity *= deceleration;
-        
-        if (Math.abs(currentVelocity) < 0.1) {
-          clearInterval(momentumScroll);
-        }
-      }, 16);
+
+    const FRICTION = 0.93;
+    const MIN_VELOCITY = 0.15; // px/ms threshold
+
+    function momentumStep() {
+      if (Math.abs(velocity) < MIN_VELOCITY) {
+        // Re-enable scroll-snap so it settles cleanly on an item
+        carousel.style.scrollSnapType = '';
+        return;
+      }
+      carousel.scrollLeft += velocity * 16; // ~60fps frame
+      velocity *= FRICTION;
+      momentumId = requestAnimationFrame(momentumStep);
+    }
+
+    if (Math.abs(velocity) > MIN_VELOCITY) {
+      momentumId = requestAnimationFrame(momentumStep);
+    } else {
+      carousel.style.scrollSnapType = '';
     }
   }
 
-  function handleMove(e) {
-    if (!isDown) return;
-    e.preventDefault();
+  // ── mouse events ────────────────────────────────────────
+  carousel.addEventListener('mousedown', onDragStart);
+  window.addEventListener('mousemove', onDragMove);   // window so fast drags don't escape
+  window.addEventListener('mouseup', onDragEnd);
 
-    const x = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
-    const walk = (x - startX) * 1.5;
-    const newScrollLeft = scrollLeft - walk;
-    carousel.scrollLeft = newScrollLeft;
+  // ── touch events ────────────────────────────────────────
+  carousel.addEventListener('touchstart', onDragStart, { passive: true });
+  carousel.addEventListener('touchmove', onDragMove, { passive: false });
+  carousel.addEventListener('touchend', onDragEnd);
 
-    // Calculate velocity for momentum
-    const timeDiff = Date.now() - startTime;
-    const distDiff = walk;
-    velocity = distDiff / timeDiff;
-  }
+  // Prevent default link/image drag interference
+  carousel.addEventListener('dragstart', e => e.preventDefault());
 }
