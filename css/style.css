@@ -91,14 +91,21 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Enforce Rosehot Serif on ALL headings site-wide — overrides any inherited font */
-h1, h2, h3, h4, h5, h6,
+/* Enforce Rosehot Serif on ALL h1/h2/h3 headings site-wide */
+h1, h2, h3 {
+  font-family: 'Rosehot Serif', serif !important;
+}
+
+/* Key heading classes also enforced — covers section titles, hero, venue, delivery, modals */
 .section-header__title,
 .hero__title,
+.venue-split__name,
 .venue-feature__title,
+.about-story__content h3,
 .delivery-option__title,
-.footer__column h4,
-.modal__title {
+.value-card__title,
+.modal__title,
+.menu-section__title {
   font-family: 'Rosehot Serif', serif !important;
 }
 
@@ -398,9 +405,11 @@ p {
 
 .nav-mobile__link {
   color: var(--color-tahini-cream);
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   transition: color var(--transition-fast);
 }
 
