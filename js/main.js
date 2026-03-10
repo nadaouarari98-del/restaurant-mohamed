@@ -1,4 +1,4 @@
-/**
+﻿/**
  * La Maison Restaurant - Main JavaScript
  * Handles navigation, animations, and interactions
  */
@@ -432,98 +432,145 @@ function initContactForm() {
   });
 }
 /**
- * Menu Carousel — smooth drag, swipe & momentum scrolling
+ * Menu Carousel - smooth drag, swipe & momentum scrolling
  */
 function initCarousel() {
   const carousel = document.getElementById('menuCarousel');
   if (!carousel) return;
 
-  let isDragging = false;
-  let startX = 0;
+  let isActive    = false;  // true once axis confirmed horizontal
+  let isDragging  = false;  // mouse drag in progress
+  let startX      = 0;
+  let startY      = 0;
   let startScrollLeft = 0;
-  let lastX = 0;
+  let lastX       = 0;
   let lastTimestamp = 0;
-  let velocity = 0;
-  let momentumId = null;
+  let velocity    = 0;      // px/ms, positive = scrolling right
+  let momentumId  = null;
+  let axisLocked  = false;  // swipe axis determined?
 
-  // ── helpers ─────────────────────────────────────────────
-  function getClientX(e) {
-    return e.touches ? e.touches[0].clientX : e.clientX;
-  }
+  // helpers
+  function getX(e) { return e.touches ? e.touches[0].clientX : e.clientX; }
+  function getY(e) { return e.touches ? e.touches[0].clientY : e.clientY; }
 
   function cancelMomentum() {
     if (momentumId) { cancelAnimationFrame(momentumId); momentumId = null; }
   }
 
-  // ── drag start ──────────────────────────────────────────
-  function onDragStart(e) {
-    // Ignore right-click
-    if (e.button && e.button !== 0) return;
-    cancelMomentum();
-    isDragging = true;
-    startX = getClientX(e);
-    startScrollLeft = carousel.scrollLeft;
-    lastX = startX;
-    lastTimestamp = Date.now();
-    velocity = 0;
-    carousel.style.cursor = 'grabbing';
-    // Prevent scroll-snap from fighting the drag
-    carousel.style.scrollSnapType = 'none';
+  function disableSnap() { carousel.style.scrollSnapType = 'none'; }
+  function enableSnap() {
+    requestAnimationFrame(() => { carousel.style.scrollSnapType = ''; });
   }
 
-  // ── drag move ───────────────────────────────────────────
-  function onDragMove(e) {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = getClientX(e);
+  // touch start
+  function onTouchStart(e) {
+    cancelMomentum();
+    isActive        = false;
+    axisLocked      = false;
+    startX          = getX(e);
+    startY          = getY(e);
+    startScrollLeft = carousel.scrollLeft;
+    lastX           = startX;
+    lastTimestamp   = Date.now();
+    velocity        = 0;
+  }
+
+  // touch move
+  function onTouchMove(e) {
+    const x  = getX(e);
+    const y  = getY(e);
     const dx = x - startX;
+    const dy = y - startY;
+
+    if (!axisLocked) {
+      if (Math.abs(dx) < 5 && Math.abs(dy) < 5) return;
+      axisLocked = true;
+      if (Math.abs(dy) > Math.abs(dx)) { isActive = false; return; }
+      isActive = true;
+      disableSnap();
+    }
+
+    if (!isActive) return;
+    e.preventDefault();
+
     carousel.scrollLeft = startScrollLeft - dx;
 
-    // Track velocity (px/ms) over last frame
     const now = Date.now();
-    const dt = now - lastTimestamp || 1;
-    velocity = (lastX - x) / dt;   // positive → scrolling right
-    lastX = x;
+    const dt  = now - lastTimestamp || 1;
+    velocity  = (lastX - x) / dt;
+    lastX     = x;
     lastTimestamp = now;
   }
 
-  // ── drag end — apply momentum then re-enable snap ───────
-  function onDragEnd() {
+  // touch end
+  function onTouchEnd() {
+    if (!isActive) return;
+    isActive = false;
+    applyMomentum();
+  }
+
+  // mouse drag
+  function onMouseDown(e) {
+    if (e.button !== 0) return;
+    cancelMomentum();
+    isDragging      = true;
+    startX          = e.clientX;
+    startScrollLeft = carousel.scrollLeft;
+    lastX           = startX;
+    lastTimestamp   = Date.now();
+    velocity        = 0;
+    carousel.style.cursor = 'grabbing';
+    disableSnap();
+  }
+
+  function onMouseMove(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x  = e.clientX;
+    const dx = x - startX;
+    carousel.scrollLeft = startScrollLeft - dx;
+    const now = Date.now();
+    const dt  = now - lastTimestamp || 1;
+    velocity  = (lastX - x) / dt;
+    lastX     = x;
+    lastTimestamp = now;
+  }
+
+  function onMouseUp() {
     if (!isDragging) return;
     isDragging = false;
     carousel.style.cursor = 'grab';
+    applyMomentum();
+  }
 
-    const FRICTION = 0.93;
-    const MIN_VELOCITY = 0.15; // px/ms threshold
+  // shared momentum
+  function applyMomentum() {
+    const FRICTION = 0.92;
+    const MIN_VEL  = 0.1;
 
-    function momentumStep() {
-      if (Math.abs(velocity) < MIN_VELOCITY) {
-        // Re-enable scroll-snap so it settles cleanly on an item
-        carousel.style.scrollSnapType = '';
-        return;
-      }
-      carousel.scrollLeft += velocity * 16; // ~60fps frame
+    function step() {
+      if (Math.abs(velocity) < MIN_VEL) { enableSnap(); return; }
+      carousel.scrollLeft += velocity * 16;
       velocity *= FRICTION;
-      momentumId = requestAnimationFrame(momentumStep);
+      momentumId = requestAnimationFrame(step);
     }
 
-    if (Math.abs(velocity) > MIN_VELOCITY) {
-      momentumId = requestAnimationFrame(momentumStep);
+    if (Math.abs(velocity) > MIN_VEL) {
+      momentumId = requestAnimationFrame(step);
     } else {
-      carousel.style.scrollSnapType = '';
+      enableSnap();
     }
   }
 
-  // ── mouse events ────────────────────────────────────────
-  carousel.addEventListener('mousedown', onDragStart);
-  window.addEventListener('mousemove', onDragMove);   // window so fast drags don't escape
-  window.addEventListener('mouseup', onDragEnd);
+  // bind events
+  carousel.addEventListener('touchstart',  onTouchStart, { passive: true  });
+  carousel.addEventListener('touchmove',   onTouchMove,  { passive: false });
+  carousel.addEventListener('touchend',    onTouchEnd,   { passive: true  });
+  carousel.addEventListener('touchcancel', onTouchEnd,   { passive: true  });
 
-  // ── touch events ────────────────────────────────────────
-  carousel.addEventListener('touchstart', onDragStart, { passive: true });
-  carousel.addEventListener('touchmove', onDragMove, { passive: false });
-  carousel.addEventListener('touchend', onDragEnd);
+  carousel.addEventListener('mousedown', onMouseDown);
+  window.addEventListener('mousemove',   onMouseMove);
+  window.addEventListener('mouseup',     onMouseUp);
 
-  // Prevent default link/image drag interference
   carousel.addEventListener('dragstart', e => e.preventDefault());
 }
