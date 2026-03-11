@@ -30,6 +30,7 @@
             <li><a href="menu.html" class="nav__link">Menu</a></li>
             <li><a href="venue.html" class="nav__link">Venue</a></li>
             <li><a href="catering.html" class="nav__link">Catering</a></li>
+            <li><a href="kunafa.html" class="nav__link">Kunafa</a></li>
             <li><a href="contact.html" class="nav__link">Contact</a></li>
           </ul>
         </nav>
@@ -50,66 +51,54 @@
     <a href="menu.html" class="nav-mobile__link">Menu</a>
     <a href="venue.html" class="nav-mobile__link">Venue</a>
     <a href="catering.html" class="nav-mobile__link">Catering</a>
+    <a href="kunafa.html" class="nav-mobile__link">Kunafa</a>
     <a href="contact.html" class="nav-mobile__link">Contact</a>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero__background"></div>
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
-      <p class="hero__subtitle" style="margin-top: 3rem;">Order Now</p>
-      <h1 class="hero__title" style="color: var(--color-primary); font-size: 3rem;">Place Your Order</h1>
-      <p class="hero__tagline">Enjoy authentic Lebanese cuisine delivered to your door</p>
-    </div>
-  </section>
-
-  <!-- Order Options Section -->
-  <section class="section" id="order-options">
+  <!-- Order Section -->
+  <section class="section" id="order-options" style="padding: 6rem 2rem;">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-header__subtitle">Choose Your Platform</p>
+        <p class="section-header__subtitle">Order Online</p>
         <h2 class="section-header__title">Order Through Our Delivery Partners</h2>
         <div class="section-header__divider"></div>
-        <p style="max-width: 600px; margin: var(--spacing-md) auto 0; color: var(--color-text-light);">Select your preferred delivery platform to browse our full menu and place your order.</p>
+        <p style="max-width: 640px; margin: var(--spacing-md) auto 0; color: var(--color-text-light); line-height: 1.8;">
+          Taste and share our oven-fresh flat breads, all-day breakfast trays, feel-good street food, and classic western comforts, alongside desserts by Fayrooz.
+        </p>
       </div>
 
-      <!-- Delivery App Cards - delivery app links to be added -->
-      <div class="delivery__options" style="margin-top: var(--spacing-lg); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg); max-width: 900px; margin-left: auto; margin-right: auto;">
-        <div class="delivery-option fade-in" style="text-align: center; padding: var(--spacing-lg); border: 1px solid #e0e0e0; border-radius: 8px; background-color: var(--color-tahini-cream);">
-          <div style="height: 60px; background-color: #e0e0e0; border-radius: 8px; margin-bottom: var(--spacing-md); display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.9rem;">
-            [Logo - App 1]
-          </div>
-          <h3 class="delivery-option__title" style="color: var(--color-primary); margin-bottom: var(--spacing-sm);">Delivery App 1</h3>
-          <p class="delivery-option__text" style="color: var(--color-text-light); margin-bottom: var(--spacing-md);">Order delivery directly through the app</p>
-          <!-- delivery app links to be added -->
-          <a href="#" class="btn btn--primary" style="pointer-events: none; opacity: 0.5;" disabled>Coming Soon</a>
-        </div>
+      <!-- Delivery App Logos Row -->
+      <div class="fade-in" style="margin-top: var(--spacing-xl); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2.5rem;">
 
-        <div class="delivery-option fade-in" style="text-align: center; padding: var(--spacing-lg); border: 1px solid #e0e0e0; border-radius: 8px; background-color: var(--color-tahini-cream);">
-          <div style="height: 60px; background-color: #e0e0e0; border-radius: 8px; margin-bottom: var(--spacing-md); display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.9rem;">
-            [Logo - App 2]
-          </div>
-          <h3 class="delivery-option__title" style="color: var(--color-primary); margin-bottom: var(--spacing-sm);">Delivery App 2</h3>
-          <p class="delivery-option__text" style="color: var(--color-text-light); margin-bottom: var(--spacing-md);">Fast delivery within 5km radius</p>
-          <!-- delivery app links to be added -->
-          <a href="#" class="btn btn--primary" style="pointer-events: none; opacity: 0.5;" disabled>Coming Soon</a>
-        </div>
+        <!-- Talabat -->
+        <a href="https://www.talabat.com" target="_blank" rel="noopener" aria-label="Order on Talabat"
+           style="display:flex; align-items:center; justify-content:center; width:160px; height:80px; background:var(--color-tahini-cream); border-radius:12px; border:1px solid #e5ddd5; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(107,83,68,0.15)'" onmouseout="this.style.boxShadow='none'">
+          <svg viewBox="0 0 120 40" width="110" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <text x="10" y="28" font-family="Montserrat,sans-serif" font-weight="700" font-size="22" fill="#6B5344">talabat</text>
+          </svg>
+        </a>
 
-        <div class="delivery-option fade-in" style="text-align: center; padding: var(--spacing-lg); border: 1px solid #e0e0e0; border-radius: 8px; background-color: var(--color-tahini-cream);">
-          <div style="height: 60px; background-color: #e0e0e0; border-radius: 8px; margin-bottom: var(--spacing-md); display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.9rem;">
-            [Logo - App 3]
-          </div>
-          <h3 class="delivery-option__title" style="color: var(--color-primary); margin-bottom: var(--spacing-sm);">Delivery App 3</h3>
-          <p class="delivery-option__text" style="color: var(--color-text-light); margin-bottom: var(--spacing-md);">Meal kits with curated ingredients</p>
-          <!-- delivery app links to be added -->
-          <a href="#" class="btn btn--primary" style="pointer-events: none; opacity: 0.5;" disabled>Coming Soon</a>
-        </div>
+        <!-- Noon Food -->
+        <a href="https://www.noon.com/uae-en/food" target="_blank" rel="noopener" aria-label="Order on Noon Food"
+           style="display:flex; align-items:center; justify-content:center; width:160px; height:80px; background:var(--color-tahini-cream); border-radius:12px; border:1px solid #e5ddd5; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(107,83,68,0.15)'" onmouseout="this.style.boxShadow='none'">
+          <svg viewBox="0 0 120 40" width="110" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <text x="10" y="28" font-family="Montserrat,sans-serif" font-weight="700" font-size="22" fill="#6B5344">noon</text>
+          </svg>
+        </a>
+
+        <!-- Careem -->
+        <a href="https://www.careem.com" target="_blank" rel="noopener" aria-label="Order on Careem"
+           style="display:flex; align-items:center; justify-content:center; width:160px; height:80px; background:var(--color-tahini-cream); border-radius:12px; border:1px solid #e5ddd5; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(107,83,68,0.15)'" onmouseout="this.style.boxShadow='none'">
+          <svg viewBox="0 0 120 40" width="110" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <text x="4" y="28" font-family="Montserrat,sans-serif" font-weight="700" font-size="22" fill="#6B5344">careem</text>
+          </svg>
+        </a>
+
       </div>
 
-      <div style="text-align: center; margin-top: var(--spacing-lg);">
-        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-md);">Or call us directly at <strong>+971 xxx xxxx</strong> to place your order</p>
-        <a href="contact.html" class="btn btn--dark">Contact Us</a>
+      <!-- Coming Soon -->
+      <div style="text-align: center; margin-top: var(--spacing-xl);">
+        <a href="#" class="btn btn--primary" style="pointer-events: none; opacity: 0.5;" disabled>Coming Soon</a>
       </div>
     </div>
   </section>
@@ -120,7 +109,7 @@
       <div class="footer__grid">
         <!-- About Column -->
         <div class="footer__column">
-          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="Managish – Best Lebanese Turkish restaurant Dubai UAE Sharjah ??????" class="footer__logo" loading="lazy">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="Managish &#x2013; Best Lebanese Turkish restaurant Dubai UAE Sharjah" class="footer__logo" loading="lazy">
           <p>
             Authentic Turkish and Lebanese cuisine. Celebrating tradition through modern expression.
           </p>
@@ -150,12 +139,12 @@
         <div class="footer__column">
           <h4>Opening Hours</h4>
           <ul>
-            <li><strong>Ramadan Hours:</strong></li>
-            <li>Delivery & Takeaway: 4pm - 2:45am</li>
-            <li>Dine-in: After Maghrib - 3am</li>
+            <li><strong>Ramadan Hours</strong></li>
+            <li>Delivery and Takeaway from 4pm to 2:45am</li>
+            <li>Dine-in after Maghrib prayer to 3am</li>
             <li>&nbsp;</li>
-            <li><strong>Regular Hours:</strong></li>
-            <li>7am - 1am daily</li>
+            <li><strong>Regular Hours</strong></li>
+            <li>7am to 1am daily</li>
           </ul>
         </div>
 
@@ -163,10 +152,9 @@
         <div class="footer__column">
           <h4>Get in Touch</h4>
           <p>
-            Nest 5, Aljada<br>
-            Sharjah, UAE<br>
-            <a href="tel:+971065699255">+971 (06) 569 9255</a><br>
-            <a href="mailto:info@managish.com">info@managish.com</a>
+            Call <a href="tel:+971065699255">+971 (06) 569 9255</a><br>
+            Email <a href="mailto:info@managish.com">info@managish.com</a><br>
+            Visit Us: Nest 5, Aljada Sharjah
           </p>
           <div class="footer__map">
             <iframe

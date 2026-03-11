@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book the Managish Kunafa Concierge — a live Kunafa cart for your events, crafted by Fayrooz Gourmet in Sharjah, UAE.">
+  <title>Kunafa Concierge | MANAGISH &#x2014; Sharjah UAE</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=15">
+
+  <style>
+    /* ===== KUNAFA PAGE SPECIFIC ===== */
+
+    /* Video Hero */
+    .kunafa-hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 560px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .kunafa-hero__video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .kunafa-hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 12, 8, 0.52);
+      z-index: 1;
+    }
+    .kunafa-hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 var(--spacing-sm);
+    }
+
+    /* Intro section */
+    .kunafa-intro {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--color-text);
+      line-height: 1.9;
+      font-size: 1.05rem;
+    }
+    .kunafa-intro p + p {
+      margin-top: 1.4rem;
+    }
+    .kunafa-intro ul {
+      margin: 0.8rem 0 0.8rem 1.4rem;
+      list-style: disc;
+    }
+    .kunafa-intro ul li {
+      margin-bottom: 0.4rem;
+      line-height: 1.7;
+    }
+
+    /* Gallery carousel — reuse vc-* system */
+    .kunafa-gallery {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Form section */
+    .kunafa-form-wrap {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .kunafa-form-note {
+      text-align: center;
+      font-style: italic;
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-md);
+      font-size: 0.95rem;
+    }
+    #other-kunafa-field {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="sr-only">Kunafa Concierge | Live Kunafa Cart for Events | MANAGISH Sharjah UAE</h1>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="" class="logo__image" style="height: 100px; width: auto;" loading="lazy">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li><a href="menu.html" class="nav__link">Menu</a></li>
+            <li><a href="venue.html" class="nav__link">Venue</a></li>
+            <li><a href="catering.html" class="nav__link">Catering</a></li>
+            <li><a href="kunafa.html" class="nav__link nav__link--active">Kunafa</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html" class="nav-mobile__link">Home</a>
+    <a href="menu.html" class="nav-mobile__link">Menu</a>
+    <a href="venue.html" class="nav-mobile__link">Venue</a>
+    <a href="catering.html" class="nav-mobile__link">Catering</a>
+    <a href="kunafa.html" class="nav-mobile__link">Kunafa</a>
+    <a href="contact.html" class="nav-mobile__link">Contact</a>
+  </nav>
+
+  <!-- Hero Section — Video Background -->
+  <section class="kunafa-hero">
+    <video
+      class="kunafa-hero__video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="images/Kunafa with Cheese_Serving_1 (230) (1) (1).webp">
+      <source src="images/Kunafa_Gathering Scenes_Coffee_Reel_1 (2).mp4" type="video/mp4">
+    </video>
+    <div class="kunafa-hero__overlay"></div>
+    <div class="kunafa-hero__content">
+      <p class="hero__subtitle">Sweet, Golden Indulgence</p>
+      <h2 class="hero__title" style="font-size: clamp(2.8rem, 7vw, 5.5rem);">Your Kunafa Concierge</h2>
+      <div style="margin-top: var(--spacing-md);">
+        <a href="#kunafa-form" class="btn btn--primary">Book Your Kunafa Concierge</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="section" style="background-color: var(--color-tahini-cream);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Fayrooz Gourmet</p>
+        <h2 class="section-header__title">The Queen of Arabic Sweets</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <div class="kunafa-intro fade-in">
+        <p>Crown your events with Kunafa, the long beloved Queen of Arabic Sweets, freshly crafted by Fayrooz Gourmet, the only premium confectionery and bakehouse in Sharjah&#x2019;s Al Zahia neighborhood.</p>
+
+        <p>Book our Kunafa Cart as your very own Kunafa Concierge.</p>
+
+        <p><strong>Standard inclusions:</strong></p>
+        <ul>
+          <li>4 hours live station plus 1 hour ingress and 1 hour egress</li>
+          <li>Minimum of 100 individual servings</li>
+          <li>One serving attendant</li>
+          <li>Transportation to &amp; from in-scope locations</li>
+        </ul>
+
+        <p><strong>Upgrades available:</strong> Coffee and/or tea service, expanded dessert selection, additional hours, extra servings, and supplementary staffing.</p>
+
+        <p><strong>Chargeable:</strong> Transportation to &amp; from out-of-scope locations.</p>
+
+        <p>Using time-honored techniques and made with the best quality ingredients, Fayrooz Kunafa is a standout dessert sure to delight your guests and make your gatherings so much sweeter, more special, and incredibly memorable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Gallery</p>
+        <h2 class="section-header__title">A Feast for the Eyes</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <div class="kunafa-gallery fade-in">
+        <div class="vc-wrap" data-carousel="kunafaCarousel">
+          <div class="vc-track" id="kunafaCarousel">
+            <div class="vc-slide"><img src="images/Kunafa_Serving_Arabic Coffee_1 (2).webp" alt="Kunafa served alongside Arabic coffee" loading="lazy"></div>
+            <div class="vc-slide"><img src="images/Kunafa with Cream_1 (148).webp" alt="Kunafa with cream by Fayrooz Gourmet" loading="lazy"></div>
+            <div class="vc-slide"><img src="images/Kunafa 2_1 (108).webp" alt="Fayrooz Gourmet Kunafa" loading="lazy"></div>
+            <div class="vc-slide"><img src="images/Kunafa with Cheese_Serving_1 (230) (1) (1).webp" alt="Kunafa with cheese by Fayrooz Gourmet" loading="lazy"></div>
+          </div>
+          <button class="vc-prev" aria-label="Previous photo">&#8592;</button>
+          <button class="vc-next" aria-label="Next photo">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry Form -->
+  <section class="section section--cream" id="kunafa-form">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-header__subtitle">Let&#x2019;s Plan Together</p>
+        <h2 class="section-header__title">Book Your Kunafa Concierge</h2>
+        <div class="section-header__divider"></div>
+      </div>
+
+      <div class="kunafa-form-wrap fade-in">
+        <p class="kunafa-form-note">Book 3 days before the event, subject to availability.</p>
+
+        <form
+          class="form"
+          name="kunafa-inquiry"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/contact.html">
+          <input type="hidden" name="form-name" value="kunafa-inquiry">
+          <input type="hidden" name="_to" value="info@managish.com">
+          <p style="display: none;">
+            <label>Don&#x2019;t fill this out if you&#x2019;re human: <input name="bot-field"></label>
+          </p>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="k-name">Name *</label>
+              <input type="text" id="k-name" name="name" class="form__input" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="k-email">Email *</label>
+              <input type="email" id="k-email" name="email" class="form__input" required>
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="k-mobile">Mobile Number *</label>
+            <input type="tel" id="k-mobile" name="mobile" class="form__input" placeholder="+971 XX XXX XXXX" required>
+          </div>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="k-datetime">Event Date and Time *</label>
+              <input type="datetime-local" id="k-datetime" name="event_datetime" class="form__input" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="k-pax">Number of Pax *</label>
+              <input type="number" id="k-pax" name="pax" class="form__input" min="1" placeholder="e.g. 150" required>
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="k-location">Event Location *</label>
+            <input type="text" id="k-location" name="event_location" class="form__input" placeholder="Venue name and address" required>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="k-requirements">Requirements *</label>
+            <select id="k-requirements" name="requirements" class="form__select" required onchange="toggleOtherField(this)">
+              <option value="">Select an option</option>
+              <option value="Kunafa with Cheese">Kunafa with Cheese</option>
+              <option value="Kunafa with Cream">Kunafa with Cream</option>
+              <option value="Both Kunafa with Cheese &amp; Kunafa with Cream">Both Kunafa with Cheese &amp; Kunafa with Cream</option>
+              <option value="Other Kunafa">Other Kunafa (please specify)</option>
+            </select>
+          </div>
+
+          <div class="form__group" id="other-kunafa-field">
+            <label class="form__label" for="k-other-kunafa">Please specify *</label>
+            <input type="text" id="k-other-kunafa" name="other_kunafa_spec" class="form__input" placeholder="Describe the Kunafa you have in mind">
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="k-upgrades">Upgrades <span style="font-weight:400; color:var(--color-text-light);">(optional)</span></label>
+            <input type="text" id="k-upgrades" name="upgrades" class="form__input" placeholder="e.g. Coffee service, extra hour, expanded dessert selection">
+          </div>
+
+          <div class="text-center" style="margin-top: var(--spacing-lg);">
+            <button type="submit" class="btn btn--primary">Book Your Kunafa Concierge</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- About Column -->
+        <div class="footer__column">
+          <img src="images/Managish Gold & Terracotta Logo PNG.png" alt="Managish &#x2013; Best Lebanese Turkish restaurant Sharjah UAE" class="footer__logo" loading="lazy">
+          <p>
+            Authentic Turkish and Lebanese cuisine. Celebrating tradition through modern expression.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram" class="footer__social-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <circle cx="17.5" cy="6.5" r="1.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer__column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="venue.html">Venue Rental</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li><a href="kunafa.html">Kunafa Concierge</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours Column -->
+        <div class="footer__column">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li><strong>Ramadan Hours</strong></li>
+            <li>Delivery and Takeaway from 4pm to 2:45am</li>
+            <li>Dine-in after Maghrib prayer to 3am</li>
+            <li>&nbsp;</li>
+            <li><strong>Regular Hours</strong></li>
+            <li>7am to 1am daily</li>
+          </ul>
+        </div>
+
+        <!-- Contact & Map Column -->
+        <div class="footer__column">
+          <h4>Get in Touch</h4>
+          <p>
+            Call <a href="tel:+971065699255">+971 (06) 569 9255</a><br>
+            Email <a href="mailto:info@managish.com">info@managish.com</a><br>
+            Visit Us: Nest 5, Aljada Sharjah
+          </p>
+          <div class="footer__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.7527169677563!2d55.47648772346892!3d25.321269268656463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5fbe736b2dcb%3A0xd7f63ca6ab71def7!2sManagish%20Aljada!5e0!3m2!1sen!2sae!4v1672531234567"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 MANAGISH. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+  <!-- Show/hide Other Kunafa field -->
+  <script>
+    function toggleOtherField(select) {
+      const otherField = document.getElementById('other-kunafa-field');
+      const otherInput = document.getElementById('k-other-kunafa');
+      if (select.value === 'Other Kunafa') {
+        otherField.style.display = 'block';
+        otherInput.required = true;
+      } else {
+        otherField.style.display = 'none';
+        otherInput.required = false;
+        otherInput.value = '';
+      }
+    }
+
+    // Venue carousel reuse for kunafa gallery
+    (function initKunafaCarousel() {
+      document.querySelectorAll('.vc-wrap').forEach(wrap => {
+        const track = wrap.querySelector('.vc-track');
+        const slides = wrap.querySelectorAll('.vc-slide');
+        const prev = wrap.querySelector('.vc-prev');
+        const next = wrap.querySelector('.vc-next');
+        if (!track || !slides.length) return;
+        let idx = 0;
+        function goTo(n) {
+          idx = Math.max(0, Math.min(n, slides.length - 1));
+          track.scrollTo({ left: idx * track.clientWidth, behavior: 'smooth' });
+        }
+        prev.addEventListener('click', () => goTo(idx - 1));
+        next.addEventListener('click', () => goTo(idx + 1));
+        track.addEventListener('scrollend', () => {
+          idx = Math.round(track.scrollLeft / track.clientWidth);
+        });
+      });
+    })();
+  </script>
+
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
