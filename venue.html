@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="stylesheet" href="css/style.css?v=14">
 </head>
 <body>
   <!-- Header -->
@@ -256,57 +256,26 @@
       </p>
 
       <!-- Carousel Container -->
-      <div class="dining-carousel-wrapper fade-in" style="margin-top: var(--spacing-lg); position: relative; width: 100%; max-width: 100%; margin-left: auto; margin-right: auto;">
-        <div class="dining-carousel" id="diningCarousel" style="position: relative; height: 500px; background-color: #f0f0f0; overflow: hidden; width: 100%; border-radius: 8px;">
-          <img class="dining-carousel__slide" src="images/Managish Dining Room 2.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish dining room seating" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 1; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/Managish Dining Room 3.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish cozy dining space" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/DSC_6069.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish dining room interior detail" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/best-lebanese-turkish-restaurant-dubai-uae-dining-room.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish dining room interior" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/Managish Dining Room 5.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish dining room atmosphere" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/best-lebanese-turkish-restaurant-dubai-uae-interior.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish restaurant interior" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          
-          <!-- Navigation Arrows Overlay -->
-          <button class="carousel-nav-btn" id="diningPrev" aria-label="Previous photo" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background-color: rgba(197, 106, 61, 0.85); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">←</button>
-          <button class="carousel-nav-btn" id="diningNext" aria-label="Next photo" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background-color: rgba(197, 106, 61, 0.85); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">→</button>
+      <div class="vc-wrap fade-in" data-carousel="diningCarousel">
+        <div class="vc-track" id="diningCarousel">
+          <div class="vc-slide"><img src="images/Managish Dining Room 2.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish dining room seating" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/Managish Dining Room 3.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish cozy dining space" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/DSC_6069.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish dining room interior detail" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/best-lebanese-turkish-restaurant-dubai-uae-dining-room.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish dining room interior" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/Managish Dining Room 5.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish dining room atmosphere" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/best-lebanese-turkish-restaurant-dubai-uae-interior.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish restaurant interior" loading="lazy"></div>
         </div>
+        <button class="vc-prev" aria-label="Previous photo">&#8592;</button>
+        <button class="vc-next" aria-label="Next photo">&#8594;</button>
       </div>
     </div>
   </section>
-
-  <script>
-    // Dining Room Carousel
-    document.addEventListener('DOMContentLoaded', function() {
-      const carousel = document.getElementById('diningCarousel');
-      const slides = carousel.querySelectorAll('.dining-carousel__slide');
-      const prevBtn = document.getElementById('diningPrev');
-      const nextBtn = document.getElementById('diningNext');
-      let currentSlide = 0;
-
-      function showSlide(n) {
-        slides.forEach(slide => slide.style.opacity = '0');
-        slides[n].style.opacity = '1';
-      }
-
-      function nextSlideFunc() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
-
-      function prevSlideFunc() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-      }
-
-      prevBtn.addEventListener('click', prevSlideFunc);
-      nextBtn.addEventListener('click', nextSlideFunc);
-    });
-  </script>
 
   <!-- Coffee Shop Carousel -->
   <section class="section" style="background-color: var(--color-tahini-cream);">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-header__subtitle">Serene & Refined</p>
+        <p class="section-header__subtitle">Serene &amp; Refined</p>
         <h2 class="section-header__title" style="font-family: 'Rosehot Serif', serif; color: #6B5344;">Our Coffee Shop</h2>
         <div class="section-header__divider"></div>
       </div>
@@ -314,118 +283,78 @@
       <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-lg); color: #6B5344; font-size: 1.05rem; line-height: 1.8; text-align: center;">
         Crossing over into our coffee shop, the mood turns serene and the hours follow a gentler rhythm. Anchored by an elegant coffee bar, the space is soulful and softly nostalgic, designed for conversation and the rituals of coffee and sweets. Arabic pastries, specialty coffee, and classic cakes are served throughout the day, creating a setting that invites guests to sit closer and enjoy the simple pleasure of enjoying the present moment together.
       </p>
-    </div>
 
-    <!-- Carousel Container -->
-    <div class="container">
-      <div class="dining-carousel-wrapper fade-in" style="margin-top: var(--spacing-lg); position: relative; width: 100%; max-width: 100%; margin-left: auto; margin-right: auto;">
-        <div class="dining-carousel" id="coffeeCarousel" style="position: relative; height: 500px; background-color: #f0f0f0; overflow: hidden; width: 100%; border-radius: 8px;">
-          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_DSC_2548.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish coffee and sweets corner" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 1; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_DSC_0180 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish specialty coffee bar" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_DSC_0195 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish Arabic pastries and desserts" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_DSC_0441 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish sweets and coffee ambiance" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_DSC_0506 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish cafe seating area" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_Desserts_San Sebastian Cheesecake_DSC_0526 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish San Sebastian cheesecake desserts" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_MTZ_0871 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish coffee shop lounge" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/Managish Coffee & Sweets Corner_MTZ_0891 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish coffee corner evening" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-
-          <!-- Navigation Arrows Overlay (match dining style) -->
-          <button class="carousel-nav-btn" id="coffeePrev" aria-label="Previous photo" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background-color: rgba(197, 106, 61, 0.85); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">←</button>
-          <button class="carousel-nav-btn" id="coffeeNext" aria-label="Next photo" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background-color: rgba(197, 106, 61, 0.85); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">→</button>
+      <!-- Carousel Container -->
+      <div class="vc-wrap fade-in" data-carousel="coffeeCarousel">
+        <div class="vc-track" id="coffeeCarousel">
+          <div class="vc-slide"><img src="images/Managish Coffee &amp; Sweets Corner_DSC_2548.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish coffee and sweets corner" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/Managish Coffee &amp; Sweets Corner_DSC_0180 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish specialty coffee bar" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/Managish Coffee &amp; Sweets Corner_DSC_0195 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish Arabic pastries and desserts" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/Managish Coffee &amp; Sweets Corner_DSC_0441 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish sweets and coffee ambiance" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/Managish Coffee &amp; Sweets Corner_Desserts_San Sebastian Cheesecake_DSC_0526 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish San Sebastian cheesecake desserts" loading="lazy"></div>
         </div>
+        <button class="vc-prev" aria-label="Previous photo">&#8592;</button>
+        <button class="vc-next" aria-label="Next photo">&#8594;</button>
       </div>
     </div>
-
-    <script>
-      // Coffee Shop Carousel
-      document.addEventListener('DOMContentLoaded', function() {
-        const carousel = document.getElementById('coffeeCarousel');
-        if (!carousel) return;
-        const slides = carousel.querySelectorAll('.dining-carousel__slide');
-        const prevBtn = document.getElementById('coffeePrev');
-        const nextBtn = document.getElementById('coffeeNext');
-        let currentSlide = 0;
-
-        function showSlide(n) {
-          slides.forEach(slide => slide.style.opacity = '0');
-          slides[n].style.opacity = '1';
-        }
-
-        function nextSlideFunc() {
-          currentSlide = (currentSlide + 1) % slides.length;
-          showSlide(currentSlide);
-        }
-
-        function prevSlideFunc() {
-          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-          showSlide(currentSlide);
-        }
-
-        if (prevBtn) prevBtn.addEventListener('click', prevSlideFunc);
-        if (nextBtn) nextBtn.addEventListener('click', nextSlideFunc);
-      });
-    </script>
   </section>
-  
-  <!-- Our Street-side Seating (moved here) -->
+
+  <!-- Our Street-side Seating -->
   <section class="section" style="background-color: var(--color-tahini-cream);">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-header__subtitle">Effortless & Breezy</p>
+        <p class="section-header__subtitle">Effortless &amp; Breezy</p>
         <h2 class="section-header__title" style="font-family: 'Rosehot Serif', serif; color: #6B5344;">Our Street-side Seating</h2>
         <div class="section-header__divider"></div>
       </div>
 
       <p class="fade-in" style="max-width: 900px; margin: 0 auto var(--spacing-lg); color: #6B5344; font-size: 1.05rem; line-height: 1.8; text-align: center;">
-        <!-- descriptor text to follow from client -->
-        <em>Placeholder description — descriptor text to follow from client.</em>
+        Our sprawling al fresco seating naturally blends the energy of the boulevard with the ease of sit-down dining, with spacious wooden tables for larger groups to gather and classic bistro tables offering the perfect perch for couples, small parties, or solo diners savoring a coffee, a pastry, and a slice of the sweet Aljada life.
       </p>
 
       <!-- Carousel Container -->
-      <div class="dining-carousel-wrapper fade-in" style="margin-top: var(--spacing-lg); position: relative; width: 100%; max-width: 100%; margin-left: auto; margin-right: auto;">
-        <div class="dining-carousel" id="streetCarousel" style="position: relative; height: 500px; background-color: #f0f0f0; overflow: hidden; width: 100%; border-radius: 8px;">
-          <img class="dining-carousel__slide" src="images/DSC_6070.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish al fresco dining Aljada" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 1; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/DSC_6115.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish East Boulevard outdoor tables" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/DSC_6120.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish street-side terrace seating" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-          <img class="dining-carousel__slide" src="images/DSC_6123.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish evening outdoor dining" style="position: absolute; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; transition: opacity 0.6s ease-in-out; top: 0; left: 0;" loading="lazy">
-
-          <!-- Navigation Arrows Overlay -->
-          <button class="carousel-nav-btn" id="streetPrev" aria-label="Previous photo" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background-color: rgba(197, 106, 61, 0.85); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">←</button>
-          <button class="carousel-nav-btn" id="streetNext" aria-label="Next photo" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background-color: rgba(197, 106, 61, 0.85); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">→</button>
+      <div class="vc-wrap fade-in" data-carousel="streetCarousel">
+        <div class="vc-track" id="streetCarousel">
+          <div class="vc-slide"><img src="images/DSC_6070.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish al fresco dining Aljada" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/DSC_6115.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish East Boulevard outdoor tables" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/DSC_6120.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish street-side terrace seating" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/DSC_6123.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish evening outdoor dining" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/Managish Coffee &amp; Sweets Corner_MTZ_0891 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish coffee corner evening" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/Managish Coffee &amp; Sweets Corner_MTZ_0871 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish coffee shop lounge" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/Managish Coffee &amp; Sweets Corner_DSC_0506 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish cafe seating area" loading="lazy"></div>
+          <div class="vc-slide"><img src="images/Managish Coffee &amp; Sweets Corner_DSC_0157 copy.webp" alt="Best Lebanese Turkish restaurant Dubai UAE Managish coffee shop interior" loading="lazy"></div>
         </div>
+        <button class="vc-prev" aria-label="Previous photo">&#8592;</button>
+        <button class="vc-next" aria-label="Next photo">&#8594;</button>
       </div>
-
-      <script>
-        // Street-side Seating Carousel
-        document.addEventListener('DOMContentLoaded', function() {
-          const carousel = document.getElementById('streetCarousel');
-          if (!carousel) return;
-          const slides = carousel.querySelectorAll('.dining-carousel__slide');
-          const prevBtn = document.getElementById('streetPrev');
-          const nextBtn = document.getElementById('streetNext');
-          let currentSlide = 0;
-
-          function showSlide(n) {
-            slides.forEach(slide => slide.style.opacity = '0');
-            slides[n].style.opacity = '1';
-          }
-
-          function nextSlideFunc() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-          }
-
-          function prevSlideFunc() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-          }
-
-          if (prevBtn) prevBtn.addEventListener('click', prevSlideFunc);
-          if (nextBtn) nextBtn.addEventListener('click', nextSlideFunc);
-        });
-      </script>
     </div>
   </section>
+
+  <script>
+  (function() {
+    function initVenueCarousel(wrap) {
+      var track = wrap.querySelector('.vc-track');
+      var slides = wrap.querySelectorAll('.vc-slide');
+      var prev  = wrap.querySelector('.vc-prev');
+      var next  = wrap.querySelector('.vc-next');
+      if (!track || !slides.length) return;
+      var idx = 0;
+      function go(n) {
+        idx = (n + slides.length) % slides.length;
+        track.scrollTo({ left: idx * track.clientWidth, behavior: 'smooth' });
+      }
+      if (prev) prev.addEventListener('click', function() { go(idx - 1); });
+      if (next) next.addEventListener('click', function() { go(idx + 1); });
+      // keep idx in sync when user swipes
+      track.addEventListener('scrollend', function() {
+        idx = Math.round(track.scrollLeft / track.clientWidth);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.vc-wrap').forEach(initVenueCarousel);
+    });
+  })();
+  </script>
 
   <!-- Venue Features -->
   <section class="section" style="background-color: var(--color-tahini-cream);">
@@ -440,8 +369,7 @@
         <div class="venue-feature fade-in">
           <div class="venue-feature__icon">📍</div>
           <h3 class="venue-feature__title">Prime Location</h3>
-          <p class="venue-feature__text">Centrally located with easy access to public transportation Along popular East Boulevard |
-Directly across spacious parking lot</p>
+          <p class="venue-feature__text">Along popular East Boulevard | Directly across spacious parking lot</p>
         </div>
 
         <div class="venue-feature fade-in">
@@ -459,13 +387,13 @@ Directly across spacious parking lot</p>
         <div class="venue-feature fade-in">
           <div class="venue-feature__icon">👨‍🍳</div>
           <h3 class="venue-feature__title">Full Kitchen</h3>
-          <p class="venue-feature__text">On-site professional kitchen for freshly prepared cuisine</p>
+          <p class="venue-feature__text">On-site professional kitchen, chef-led team, for expertly prepared cuisine, made fresh to order</p>
         </div>
 
         <div class="venue-feature fade-in">
           <div class="venue-feature__icon">☕</div>
           <h3 class="venue-feature__title">Specialty Coffee Bar</h3>
-          <p class="venue-feature__text">Artisan coffee and beverages crafted by expert baristas</p>
+          <p class="venue-feature__text">Coffee crafted with care alongside tea, mocktails, smoothies, shakes, juices, &amp; traditional drinks</p>
         </div>
       </div>
     </div>
@@ -507,12 +435,12 @@ Directly across spacious parking lot</p>
         <div class="footer__column">
           <h4>Opening Hours</h4>
           <ul>
-            <li><strong>Ramadan Hours:</strong></li>
-            <li>Delivery & Takeaway: 4pm - 2:45am</li>
-            <li>Dine-in: After Maghrib - 3am</li>
+            <li><strong>Ramadan Hours</strong></li>
+            <li>Delivery and Takeaway from 4pm to 2:45am</li>
+            <li>Dine-in after Maghrib prayer to 3am</li>
             <li>&nbsp;</li>
-            <li><strong>Regular Hours:</strong></li>
-            <li>7am - 1am daily</li>
+            <li><strong>Regular Hours</strong></li>
+            <li>7am to 1am daily</li>
           </ul>
         </div>
 
@@ -520,10 +448,9 @@ Directly across spacious parking lot</p>
         <div class="footer__column">
           <h4>Get in Touch</h4>
           <p>
-            Nest 5, Aljada<br>
-            Sharjah, UAE<br>
-            <a href="tel:+971065699255">+971 (06) 569 9255</a><br>
-            <a href="mailto:info@managish.com">info@managish.com</a>
+            Call <a href="tel:+971065699255">+971 (06) 569 9255</a><br>
+            Email <a href="mailto:info@managish.com">info@managish.com</a><br>
+            Visit Us: Nest 5, Aljada Sharjah
           </p>
           <div class="footer__map">
             <iframe

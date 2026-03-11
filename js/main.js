@@ -543,15 +543,18 @@ function initCarousel() {
     applyMomentum();
   }
 
-  // shared momentum
+  // shared momentum (frame-rate independent)
   function applyMomentum() {
-    const FRICTION = 0.92;
-    const MIN_VEL  = 0.1;
+    const FRICTION  = 0.94;   // higher = longer, smoother coast
+    const MIN_VEL   = 0.05;   // px/ms stop threshold
+    let   lastFrame = performance.now();
 
-    function step() {
+    function step(now) {
+      const dt = Math.min(now - lastFrame, 32); // cap at 32 ms
+      lastFrame = now;
       if (Math.abs(velocity) < MIN_VEL) { enableSnap(); return; }
-      carousel.scrollLeft += velocity * 16;
-      velocity *= FRICTION;
+      carousel.scrollLeft += velocity * dt;
+      velocity *= Math.pow(FRICTION, dt / 16); // normalise to 60fps
       momentumId = requestAnimationFrame(step);
     }
 
