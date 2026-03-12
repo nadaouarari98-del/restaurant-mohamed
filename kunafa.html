@@ -58,7 +58,7 @@
     .kunafa-intro {
       max-width: 760px;
       margin: 0 auto;
-      color: var(--color-text);
+      color: var(--color-text-light);
       line-height: 1.9;
       font-size: 1.05rem;
     }
@@ -66,12 +66,26 @@
       margin-top: 1.4rem;
     }
     .kunafa-intro ul {
-      margin: 0.8rem 0 0.8rem 1.4rem;
+      margin: 0.8rem 0 1rem 1.4rem;
       list-style: disc;
     }
     .kunafa-intro ul li {
       margin-bottom: 0.4rem;
       line-height: 1.7;
+      color: var(--color-text-light);
+    }
+    .kunafa-intro strong {
+      color: var(--color-text);
+      font-weight: 700;
+    }
+    .kunafa-intro .intro-lead {
+      color: var(--color-text);
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    .kunafa-intro .intro-note {
+      color: var(--color-text-light);
+      font-style: italic;
     }
 
     /* Gallery carousel — reuse vc-* system */
@@ -114,8 +128,9 @@
             <li><a href="index.html" class="nav__link">Home</a></li>
             <li><a href="menu.html" class="nav__link">Menu</a></li>
             <li><a href="venue.html" class="nav__link">Venue</a></li>
-            <li><a href="catering.html" class="nav__link">Catering</a></li>
-            <li><a href="kunafa.html" class="nav__link nav__link--active">Kunafa</a></li>
+            <li class="nav__item--dropdown"><a href="catering.html" class="nav__link">Catering</a>
+              <div class="nav__dropdown"><a href="kunafa.html">Kunafa</a></div>
+            </li>
             <li><a href="contact.html" class="nav__link">Contact</a></li>
           </ul>
         </nav>
@@ -136,7 +151,7 @@
     <a href="menu.html" class="nav-mobile__link">Menu</a>
     <a href="venue.html" class="nav-mobile__link">Venue</a>
     <a href="catering.html" class="nav-mobile__link">Catering</a>
-    <a href="kunafa.html" class="nav-mobile__link">Kunafa</a>
+    <a href="kunafa.html" class="nav-mobile__sub-link">Kunafa</a>
     <a href="contact.html" class="nav-mobile__link">Contact</a>
   </nav>
 
@@ -153,10 +168,10 @@
     </video>
     <div class="kunafa-hero__overlay"></div>
     <div class="kunafa-hero__content">
-      <p class="hero__subtitle">Sweet, Golden Indulgence</p>
+      <p class="hero__subtitle">Fayrooz Gourmet</p>
       <h2 class="hero__title" style="font-size: clamp(2.8rem, 7vw, 5.5rem);">Your Kunafa Concierge</h2>
       <div style="margin-top: var(--spacing-md);">
-        <a href="#kunafa-form" class="btn btn--primary">Book Your Kunafa Concierge</a>
+        <a href="#kunafa-form" class="btn btn--primary">Ask for Details</a>
       </div>
     </div>
   </section>
@@ -165,13 +180,13 @@
   <section class="section" style="background-color: var(--color-tahini-cream);">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-header__subtitle">Fayrooz Gourmet</p>
-        <h2 class="section-header__title">The Queen of Arabic Sweets</h2>
+        <p class="section-header__subtitle">Sweet, Golden Indulgence</p>
+        <h2 class="section-header__title">Kunafa, Queen of Arabic Sweets</h2>
         <div class="section-header__divider"></div>
       </div>
 
       <div class="kunafa-intro fade-in">
-        <p>Crown your events with Kunafa, the long beloved Queen of Arabic Sweets, freshly crafted by Fayrooz Gourmet, the only premium confectionery and bakehouse in Sharjah&#x2019;s Al Zahia neighborhood.</p>
+        <p class="intro-lead">Crown your events with our Kunafa, the long beloved Queen of Arabic Sweets, freshly crafted by Fayrooz Gourmet, the only premium confectionery and bakehouse in Sharjah&#x2019;s Al Zahia neighborhood.</p>
 
         <p>Book our Kunafa Cart as your very own Kunafa Concierge.</p>
 
@@ -187,7 +202,7 @@
 
         <p><strong>Chargeable:</strong> Transportation to &amp; from out-of-scope locations.</p>
 
-        <p>Using time-honored techniques and made with the best quality ingredients, Fayrooz Kunafa is a standout dessert sure to delight your guests and make your gatherings so much sweeter, more special, and incredibly memorable.</p>
+        <p class="intro-note">Using time-honored techniques and made with the best quality ingredients, Fayrooz Kunafa is a standout dessert sure to delight your guests and make your gatherings so much sweeter, more special, and incredibly memorable.</p>
       </div>
     </div>
   </section>
@@ -196,8 +211,8 @@
   <section class="section">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-header__subtitle">Gallery</p>
-        <h2 class="section-header__title">A Feast for the Eyes</h2>
+        <p class="section-header__subtitle">Fayrooz Kunafa</p>
+        <h2 class="section-header__title">Golden Moments Made Sweeter</h2>
         <div class="section-header__divider"></div>
       </div>
 
@@ -208,6 +223,7 @@
             <div class="vc-slide"><img src="images/Kunafa with Cream_1 (148).webp" alt="Kunafa with cream by Fayrooz Gourmet" loading="lazy"></div>
             <div class="vc-slide"><img src="images/Kunafa 2_1 (108).webp" alt="Fayrooz Gourmet Kunafa" loading="lazy"></div>
             <div class="vc-slide"><img src="images/Kunafa with Cheese_Serving_1 (230) (1) (1).webp" alt="Kunafa with cheese by Fayrooz Gourmet" loading="lazy"></div>
+            <div class="vc-slide"><img src="images/1 (90).webp" alt="Fayrooz Kunafa golden serving" loading="lazy"></div>
           </div>
           <button class="vc-prev" aria-label="Previous photo">&#8592;</button>
           <button class="vc-next" aria-label="Next photo">&#8594;</button>
@@ -220,8 +236,8 @@
   <section class="section section--cream" id="kunafa-form">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-header__subtitle">Let&#x2019;s Plan Together</p>
-        <h2 class="section-header__title">Book Your Kunafa Concierge</h2>
+        <p class="section-header__subtitle">Reserve Your Date</p>
+        <h2 class="section-header__title">Kunafa, Queen of Arabic Sweets</h2>
         <div class="section-header__divider"></div>
       </div>
 
@@ -295,7 +311,7 @@
           </div>
 
           <div class="text-center" style="margin-top: var(--spacing-lg);">
-            <button type="submit" class="btn btn--primary">Book Your Kunafa Concierge</button>
+            <button type="submit" class="btn btn--primary">Get a Quotation</button>
           </div>
         </form>
       </div>
