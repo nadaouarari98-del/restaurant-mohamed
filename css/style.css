@@ -492,6 +492,75 @@ p {
   color: var(--color-managish-amber);
 }
 
+/* Mobile expandable menu with submenu */
+.nav-mobile__item--expandable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-mobile__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--color-tahini-cream);
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.nav-mobile__toggle:hover {
+  color: var(--color-managish-amber);
+}
+
+.nav-mobile__toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  line-height: 1;
+  transition: transform var(--transition-normal);
+  margin-top: 2px;
+}
+
+.nav-mobile__item--expandable.is-expanded .nav-mobile__toggle-icon {
+  transform: rotate(180deg);
+}
+
+.nav-mobile__submenu {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transition: max-height var(--transition-normal), opacity var(--transition-normal), margin var(--transition-normal);
+  opacity: 0;
+}
+
+.nav-mobile__item--expandable.is-expanded .nav-mobile__submenu {
+  max-height: 60px;
+  opacity: 1;
+  margin-top: 0.75rem;
+}
+
+.nav-mobile__submenu .nav-mobile__sub-link {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+  padding-left: 1.5rem;
+}
+
 /* ============================================
    Hero Section
    ============================================ */

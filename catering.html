@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=16">
+  <link rel="stylesheet" href="css/style.css?v=17">
   
   <!-- Page-specific styles -->
   <style>
@@ -61,8 +61,14 @@
     <a href="index.html" class="nav-mobile__link">Home</a>
     <a href="menu.html" class="nav-mobile__link">Menu</a>
     <a href="venue.html" class="nav-mobile__link">Venue</a>
-    <a href="catering.html" class="nav-mobile__link">Catering</a>
-    <a href="kunafa.html" class="nav-mobile__sub-link">Kunafa</a>
+    <div class="nav-mobile__item--expandable">
+      <a href="catering.html" class="nav-mobile__toggle">
+        Catering <span class="nav-mobile__toggle-icon">▾</span>
+      </a>
+      <div class="nav-mobile__submenu">
+        <a href="kunafa.html" class="nav-mobile__sub-link">Kunafa</a>
+      </div>
+    </div>
     <a href="contact.html" class="nav-mobile__link">Contact</a>
   </nav>
 

@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=16">
+  <link rel="stylesheet" href="css/style.css?v=17">
 
   <style>
     /* ===== KUNAFA PAGE SPECIFIC ===== */
@@ -150,8 +150,14 @@
     <a href="index.html" class="nav-mobile__link">Home</a>
     <a href="menu.html" class="nav-mobile__link">Menu</a>
     <a href="venue.html" class="nav-mobile__link">Venue</a>
-    <a href="catering.html" class="nav-mobile__link">Catering</a>
-    <a href="kunafa.html" class="nav-mobile__sub-link">Kunafa</a>
+    <div class="nav-mobile__item--expandable">
+      <a href="catering.html" class="nav-mobile__toggle">
+        Catering <span class="nav-mobile__toggle-icon">▾</span>
+      </a>
+      <div class="nav-mobile__submenu">
+        <a href="kunafa.html" class="nav-mobile__sub-link">Kunafa</a>
+      </div>
+    </div>
     <a href="contact.html" class="nav-mobile__link">Contact</a>
   </nav>
 
@@ -202,7 +208,7 @@
 
         <p><strong>Chargeable:</strong> Transportation to &amp; from out-of-scope locations.</p>
 
-        <p class="intro-note">Using time-honored techniques and made with the best quality ingredients, Fayrooz Kunafa is a standout dessert sure to delight your guests and make your gatherings so much sweeter, more special, and incredibly memorable.</p>
+        <p class="intro-lead">Using time-honored techniques and made with the best quality ingredients, Fayrooz Kunafa is a standout dessert sure to delight your guests and make your gatherings so much sweeter, more special, and incredibly memorable.</p>
       </div>
     </div>
   </section>
@@ -237,7 +243,7 @@
     <div class="container">
       <div class="section-header fade-in">
         <p class="section-header__subtitle">Reserve Your Date</p>
-        <h2 class="section-header__title">Kunafa, Queen of Arabic Sweets</h2>
+        <h2 class="section-header__title">Fayrooz Kunafa Concierge</h2>
         <div class="section-header__divider"></div>
       </div>
 
@@ -417,7 +423,7 @@
         if (!track || !slides.length) return;
         let idx = 0;
         function goTo(n) {
-          idx = Math.max(0, Math.min(n, slides.length - 1));
+          idx = (n + slides.length) % slides.length;
           track.scrollTo({ left: idx * track.clientWidth, behavior: 'smooth' });
         }
         prev.addEventListener('click', () => goTo(idx - 1));

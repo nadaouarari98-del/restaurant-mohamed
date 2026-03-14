@@ -48,6 +48,19 @@ function initNavigation() {
       body.style.overflow = '';
     }
   });
+
+  // Mobile expandable menu toggle
+  const expandableItems = navMobile.querySelectorAll('.nav-mobile__item--expandable');
+  expandableItems.forEach(item => {
+    const toggle = item.querySelector('.nav-mobile__toggle');
+    if (toggle) {
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        item.classList.toggle('is-expanded');
+      });
+    }
+  });
 }
 
 /**
