@@ -3,7 +3,10 @@
  * Handles navigation, animations, and interactions
  */
 
+console.log('main.js loaded');
+
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOMContentLoaded fired');
   // Initialize all components
   initNavigation();
   initScrollHeader();
@@ -30,9 +33,19 @@ function initNavigation() {
     body.style.overflow = navMobile.classList.contains('nav-mobile--active') ? 'hidden' : '';
   });
 
-  // Close mobile nav when clicking a link
-  const mobileLinks = navMobile.querySelectorAll('.nav-mobile__link');
+  // Close mobile nav when clicking a link (but not submenu triggers)
+  const mobileLinks = navMobile.querySelectorAll('.nav-mobile__link:not(.nav-mobile__link--submenu)');
   mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('nav-toggle--active');
+      navMobile.classList.remove('nav-mobile--active');
+      body.style.overflow = '';
+    });
+  });
+
+  // Also close when clicking submenu links
+  const subLinks = navMobile.querySelectorAll('.nav-mobile__sub-link');
+  subLinks.forEach(link => {
     link.addEventListener('click', () => {
       navToggle.classList.remove('nav-toggle--active');
       navMobile.classList.remove('nav-mobile--active');
@@ -49,18 +62,35 @@ function initNavigation() {
     }
   });
 
-  // Mobile expandable menu toggle
-  const expandableItems = navMobile.querySelectorAll('.nav-mobile__item--expandable');
-  expandableItems.forEach(item => {
-    const toggle = item.querySelector('.nav-mobile__toggle');
-    if (toggle) {
-      toggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        item.classList.toggle('is-expanded');
-      });
-    }
-  });
+  // Mobile slide-out submenu navigation
+  const cateringToggle = document.getElementById('cateringToggle');
+  const cateringBack = document.getElementById('cateringBack');
+  const navMobileMain = document.getElementById('navMobileMain');
+  const cateringSubmenu = document.getElementById('cateringSubmenu');
+
+  if (cateringToggle) {
+    cateringToggle.addEventListener('click', (e) => {
+      console.log('Catering button clicked!');
+      e.preventDefault();
+      e.stopPropagation();
+      navMobileMain.classList.add('is-hidden');
+      cateringSubmenu.classList.add('is-visible');
+      console.log('Submenu should now be visible');
+    });
+  } else {
+    console.error('cateringToggle element not found');
+  }
+
+  if (cateringBack) {
+    cateringBack.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      navMobileMain.classList.remove('is-hidden');
+      cateringSubmenu.classList.remove('is-visible');
+    });
+  } else {
+    console.error('cateringBack element not found');
+  }
 }
 
 /**

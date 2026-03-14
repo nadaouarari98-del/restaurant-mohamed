@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=17">
+  <link rel="stylesheet" href="css/style.css?v=19">
 </head>
 <body>
   <h1 class="sr-only">Restaurant Venue &amp; Event Space in Aljada Sharjah | MANAGISH</h1>
@@ -31,7 +31,7 @@
             <li><a href="index.html" class="nav__link">Home</a></li>
             <li><a href="menu.html" class="nav__link">Menu</a></li>
             <li><a href="venue.html" class="nav__link nav__link--active">Venue</a></li>
-            <li class="nav__item--dropdown"><a href="catering.html" class="nav__link">Catering</a>
+            <li class="nav__item--dropdown"><a href="catering.html" class="nav__link">Catering <span class="nav__chevron">▾</span></a>
               <div class="nav__dropdown"><a href="kunafa.html">Kunafa</a></div>
             </li>
             <li><a href="contact.html" class="nav__link">Contact</a></li>
@@ -50,18 +50,24 @@
 
   <!-- Mobile Navigation -->
   <nav class="nav-mobile" id="navMobile">
-    <a href="index.html" class="nav-mobile__link">Home</a>
-    <a href="menu.html" class="nav-mobile__link">Menu</a>
-    <a href="venue.html" class="nav-mobile__link">Venue</a>
-    <div class="nav-mobile__item--expandable">
-      <a href="catering.html" class="nav-mobile__toggle">
-        Catering <span class="nav-mobile__toggle-icon">▾</span>
-      </a>
-      <div class="nav-mobile__submenu">
-        <a href="kunafa.html" class="nav-mobile__sub-link">Kunafa</a>
-      </div>
+    <!-- Main menu screen -->
+    <div class="nav-mobile__main" id="navMobileMain">
+      <a href="index.html" class="nav-mobile__link">Home</a>
+      <a href="menu.html" class="nav-mobile__link">Menu</a>
+      <a href="venue.html" class="nav-mobile__link">Venue</a>
+      <button class="nav-mobile__link nav-mobile__link--submenu" id="cateringToggle" aria-label="Open Catering submenu">
+        Catering <span class="nav-mobile__arrow">→</span>
+      </button>
+      <a href="contact.html" class="nav-mobile__link">Contact</a>
     </div>
-    <a href="contact.html" class="nav-mobile__link">Contact</a>
+    
+    <!-- Catering submenu screen -->
+    <div class="nav-mobile__submenu-screen" id="cateringSubmenu">
+      <button class="nav-mobile__back" id="cateringBack" aria-label="Back to main menu">
+        <span class="nav-mobile__back-arrow">←</span> Catering
+      </button>
+      <a href="kunafa.html" class="nav-mobile__sub-link">Kunafa</a>
+    </div>
   </nav>
 
   <!-- Hero Section with Slideshow -->
